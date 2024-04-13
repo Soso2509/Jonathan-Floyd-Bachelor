@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import Conserts from "../components/Conserts";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -19,10 +20,7 @@ export default function Index({conserts}) {
   console.log(conserts)
   return <div className="recipe-list">
     {conserts.map(consert =>(
-      <div key ={consert.sys.id}>
-        <h1>{consert.fields.eventName}</h1>
-       {consert.fields.eventDate}
-        </div>
+      <Conserts key ={consert.sys.id} consert={consert} />
     ))}
   </div>;
 }

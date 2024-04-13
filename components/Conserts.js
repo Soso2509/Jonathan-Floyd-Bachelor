@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function Conserts({ consert }) {
-  const { eventName, eventDate, slug, eventHeader, eventLocation } =
+  const { eventName, eventDate, slug, eventHeader, eventLocation, ticketsLink} =
     consert.fields;
 
   return (
@@ -17,6 +17,7 @@ export default function Conserts({ consert }) {
       <div className="content">
         <h4>{eventName}</h4>
         <p>{eventDate}</p>
+        <a href={ticketsLink}>Tickets</a>
       </div>
     </div>
   );

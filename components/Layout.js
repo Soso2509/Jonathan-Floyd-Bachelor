@@ -1,22 +1,19 @@
-import Link from "next/link";
+import Header from "./Header";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
     <div className="layout">
       <header>
-        <Link href="/">
-          <h1>
-            <span>Just Add</span>
-            <span>Marmite</span>
-          </h1>
-          <h2>Spread The Joy</h2>
-        </Link>
+        <Header />
       </header>
+      <Navbar />
 
       <div className="page-content">{children}</div>
 
       <footer>
-        <p>Copyright 2021 Just Add Marmite :)</p>
+        <Footer />
       </footer>
     </div>
   );

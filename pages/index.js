@@ -10,17 +10,20 @@ export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "concert" });
 
   return {
-    props:{
-      conserts:res.items
-    }
-  }
+    props: {
+      conserts: res.items,
+    },
+  };
 }
 
-export default function Index({conserts}) {
-  console.log(conserts)
-  return <div className="recipe-list">
-    {conserts.map(consert =>(
-      <Conserts key ={consert.sys.id} consert={consert} />
-    ))}
-  </div>;
+export default function Index({ conserts }) {
+  return (
+    <>
+      <div className="ConsertWindow">
+        {conserts.map((consert) => (
+          <Conserts key={consert.sys.id} consert={consert} />
+        ))}
+      </div>
+    </>
+  );
 }

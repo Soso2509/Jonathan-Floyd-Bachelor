@@ -1,4 +1,6 @@
 import { createClient } from "contentful";
+import Image from "next/image";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -9,21 +11,26 @@ export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "biografi" });
 
   return {
-    props:{
-      bio:res.items
-    }
-  }
+    props: {
+      bio: res.items,
+    },
+  };
 }
 
+export default function Bio({ bio }) {
+  console.log(bio[0]);
 
-export default function Bio({bio}) {
-  console.log(bio[0])
-
-  const { photo, title, slug, biografi } =
-    bio[0].fields;
-    return (
-      <div className="recipe-list">
-        {title}
-      </div>
-    )
-  }
+  const { bioPhoto, title, slug, bioText } = bio[0].fields;
+  return (
+    <div>
+      <Image
+        className="consertImage"
+        src={"https:" + bioPhoto.fields.file.url}
+        width={bioPhoto.fields.file.details.image.width}
+        height={bioPhoto.fields.file.details.image.height}
+      />
+      <h2>{title}</h2>
+      <div>{documentToReactComponents(bioText)}</div>
+    </div>
+  );
+}

@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 import Conserts from "../components/Conserts";
+import Spotify from "../components/Spotify";
+import Header from "../components/Header";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -19,11 +21,23 @@ export async function getStaticProps() {
 export default function Index({ conserts }) {
   return (
     <>
+      <header>
+        <Header />
+      </header>
+
+      <h1>Concerts</h1>
       <div className="ConsertWindow">
         {conserts.map((consert) => (
           <Conserts key={consert.sys.id} consert={consert} />
         ))}
       </div>
+
+      <h1>Music</h1>
+      <div className="SpotifyContainer">
+        <Spotify />
+      </div>
     </>
   );
 }
+
+

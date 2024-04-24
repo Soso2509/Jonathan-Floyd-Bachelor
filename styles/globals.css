@@ -51,7 +51,6 @@ footer {
 }
 nav {
   display: flex;
-  width: 1fr;
   align-items: baseline;
   align-content: space-between;
 }

@@ -6,12 +6,14 @@ body {
   font-family: 'Roboto';
   font-size: 1.5em;
   color: #fff;
+  align-items: center;
 }
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 header {
   text-align: center;
@@ -53,13 +55,17 @@ nav {
   display: flex;
   align-items: baseline;
   align-content: space-between;
+  background-color: #111;
+  width: 100%;
+}
+
+.InstaContiner {
+  width: 100%;
 }
 
 
 .page-content {
-  max-width: 1200px;
-  margin: 20px auto 80px;
-  padding: 0 20px;
+  padding: 0 1rem;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -101,5 +107,8 @@ nav {
 }
 
 @media only screen and (min-width: 700px){
-  
+  .page-content {
+    max-width: 1200px;
+    margin: 20px auto 80px;
+  }
 }

@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import Conserts from "../components/Conserts";
 import Spotify from "../components/Spotify";
 import Header from "../components/Header";
+import Instagram from "../components/Instagram";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -35,6 +36,11 @@ export default function Index({ conserts }) {
       <h1>Music</h1>
       <div className="SpotifyContainer">
         <Spotify />
+      </div>
+
+      <h1>Instagram</h1>
+      <div className="InstaContiner">
+        <Instagram />
       </div>
     </>
   );

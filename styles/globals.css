@@ -88,6 +88,7 @@ nav .navPages {
 
 .page-content {
   padding: 0 1rem;
+  padding-top: 3rem;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -123,10 +124,14 @@ nav .navPages {
   max-width: 350px;
   max-height: 500px;
   overflow: hidden;
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
   background-color: #111;
   border-radius: 5%;
   padding-bottom: 1rem;
+}
+
+.concertContainer .content {
+
 }
 
 .spotifyContent {
@@ -138,6 +143,9 @@ nav .navPages {
 }
 
 @media only screen and (min-width: 700px){
+  body {
+    font-size: 18pt;
+  }
   .page-content {
     max-width: 1200px;
     margin: 20px auto 80px;

@@ -26,7 +26,7 @@ export default function Conserts({ consert }) {
       </div>
       <div className="content">
         <h4>{eventName}</h4>
-        <p>{moment(eventDate).format("LLL")}</p>
+        <p className="consertDate">{moment(eventDate).format("LLL")}</p>
         <a href={ticketsLink}>Tickets</a>
       </div>
     </div>

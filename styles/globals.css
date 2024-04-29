@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+html {
+  margin: 0;
+  height: 100%;
+  min-width: 100%;
+}
 body {
-  background: #363636;
+  background: #363636;  
+  display: flex;
   margin: 0;
   font-family: 'Roboto';
-  font-size: 1.5em;
   color: #fff;
   align-items: center;
+  min-width: 100%;
 }
 .layout {
   min-height: 100vh;
@@ -53,10 +59,26 @@ footer {
 }
 nav {
   display: flex;
-  align-items: baseline;
-  align-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   background-color: #111;
-  width: 100%;
+  min-width: 100%;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 ;
+  font-size: 20pt;
+}
+nav > .logo {
+  float: left;
+}
+nav .navPages {
+  justify-content: space-between;
+}
+.LogoIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0.5rem;
 }
 
 .InstaContiner {
@@ -71,29 +93,37 @@ nav {
   text-align: center;
 }
 
-.consertImage {
+.featured {
   display: block;
-  max-height: 200px;
-  float: center;
+  overflow: hidden;
+  max-height: 150px;
+  height: 120px;
   width: 100%;
+  align-content: center;
 }
 
 .ConsertWindow {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
+.consertImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .concertContainer {
   align-items: center;
   text-align: center;
-  width: 350px;
+  width: 180px;
   max-width: 350px;
   max-height: 500px;
   overflow: hidden;
-  float: center;
-  margin: 2rem;
+  margin: 1rem 0;
   background-color: #111;
   border-radius: 5%;
   padding-bottom: 1rem;
@@ -103,6 +133,7 @@ nav {
   width: 100%;
   height: 740px;
   border: none;
+  border-radius: 12px;
 
 }
 

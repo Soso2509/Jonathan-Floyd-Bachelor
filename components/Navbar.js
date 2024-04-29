@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../components/images/Ikon_Thick_W.png'
+import hambureger from '../components/images/hamburger_icon.png'
 
 export default function Navbar() {
+  
   return (
     <nav>
       <div className="logo">
@@ -10,7 +12,7 @@ export default function Navbar() {
           <Image
           src={Logo}
           className="LogoIcon"
-          alt="Picture of the author"
+          alt="Jonathan floyd's F icon"
           />
         </Link>
       </div>
@@ -22,6 +24,13 @@ export default function Navbar() {
         target="_blank"
       >
         Booking
+      </a>
+      <a href="javascript:void(0);" className="icon" >
+        <Image 
+        src={hambureger}
+        className="HamburgerIcon"
+        alt="Hamburger menu icon"
+        />
       </a>
       </div>
       

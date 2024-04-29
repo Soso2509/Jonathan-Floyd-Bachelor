@@ -80,6 +80,11 @@ nav .navPages {
   height: 64px;
   margin: 0.5rem;
 }
+.HamburgerIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 1rem;
+}
 
 .InstaContiner {
   width: 100%;
@@ -145,9 +150,18 @@ nav .navPages {
 @media only screen and (min-width: 700px){
   body {
     font-size: 18pt;
+    display: block;
   }
   .page-content {
     max-width: 1200px;
     margin: 20px auto 80px;
+  }
+
+  .concertContainer {
+    width: 250px;
+  }
+  .featured {
+    max-height: 200px;
+    height: 150px;
   }
 }

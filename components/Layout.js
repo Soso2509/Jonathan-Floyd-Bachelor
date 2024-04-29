@@ -17,7 +17,6 @@ export default function Layout({ children }) {
       ) : (
         <Navbar />
       )}
-
       <div className="page-content">{children}</div>
 
       <footer>

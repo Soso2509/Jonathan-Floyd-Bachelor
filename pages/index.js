@@ -1,6 +1,8 @@
 import { createClient } from "contentful";
 import Conserts from "../components/Conserts";
 import Merch from "../components/Merch";
+import Spotify from "../components/Spotify";
+import Instagram from "../components/Instagram";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -24,6 +26,8 @@ export default function Index({ conserts, merchitems }) {
   console.log(merchitems)
   return (
     <>
+
+      <h1>Concerts</h1>
       <div className="ConsertWindow">
         {conserts.map((consert) => (
           <Conserts key={consert.sys.id} consert={consert} />
@@ -33,7 +37,18 @@ export default function Index({ conserts, merchitems }) {
         {merchitems.map((item) => (
           <Merch key={item.sys.id} item={item} />
         ))}
+
+      <h1>Music</h1>
+      <div className="SpotifyContainer">
+        <Spotify />
+      </div>
+
+      <h1>Instagram</h1>
+      <div className="InstaContiner">
+        <Instagram />
       </div>
     </>
   );
 }
+
+

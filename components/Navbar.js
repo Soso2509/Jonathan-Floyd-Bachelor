@@ -1,14 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
+import Logo from '../components/images/Ikon_Thick_W.png'
+import hambureger from '../components/images/hamburger_icon.png'
 
 export default function Navbar() {
+  
   return (
     <nav>
       <div className="logo">
         <Link href="/">
-          <h1>Jonathan Floyd</h1>
+          <Image
+          src={Logo}
+          className="LogoIcon"
+          alt="Jonathan floyd's F icon"
+          />
         </Link>
       </div>
-      <Link href="/bio">Bio</Link>
+      <div className="navPages">
+        <Link href="/bio">Bio</Link>
       <Link href="/media">Media</Link>
       <a
         href={"https://unitedstage.no/artister/jonathan-floyd/"}
@@ -16,6 +25,15 @@ export default function Navbar() {
       >
         Booking
       </a>
+      <a href="javascript:void(0);" className="icon" >
+        <Image 
+        src={hambureger}
+        className="HamburgerIcon"
+        alt="Hamburger menu icon"
+        />
+      </a>
+      </div>
+      
     </nav>
   );
 }

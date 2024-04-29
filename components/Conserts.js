@@ -1,19 +1,18 @@
 import Image from "next/image";
 import moment from "moment";
-import 'moment/locale/en-gb';
+import "moment/locale/en-gb";
 
 export default function Conserts({ consert }) {
   const {
     eventName,
     eventDate,
-    eventTime,
-    slug,
+    eventLocationLink,
+    eventPlaceName,
     eventHeader,
-    eventLocation,
     ticketsLink,
   } = consert.fields;
 
-  moment.locale('en-gb')
+  moment.locale("en-gb");
   return (
     <div className="concertContainer">
       <div className="featured">
@@ -26,7 +25,10 @@ export default function Conserts({ consert }) {
       </div>
       <div className="content">
         <h4>{eventName}</h4>
-        <p className="consertDate">{moment(eventDate).format("LLL")}</p>
+        <p>
+          At <a href={eventLocationLink}>{eventPlaceName}</a>
+        </p>
+        <p>{moment(eventDate).format("LLL")}</p>
         <a href={ticketsLink}>Tickets</a>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import Conserts from "../components/Conserts";
+import Merch from "../components/Merch";
 import Spotify from "../components/Spotify";
-import Header from "../components/Header";
 import Instagram from "../components/Instagram";
 
 export async function getStaticProps() {
@@ -10,21 +10,22 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: "concert" });
+  const konsert = await client.getEntries({ content_type: "concert" });
+  const merch = await client.getEntries({ content_type: "merchItem" });
+
 
   return {
     props: {
-      conserts: res.items,
+      conserts: konsert.items,
+      merchitems:merch.items,
     },
   };
 }
 
-export default function Index({ conserts }) {
+export default function Index({ conserts, merchitems }) {
+  console.log(merchitems)
   return (
     <>
-      <header>
-        <Header />
-      </header>
 
       <h1>Concerts</h1>
       <div className="ConsertWindow">
@@ -32,6 +33,10 @@ export default function Index({ conserts }) {
           <Conserts key={consert.sys.id} consert={consert} />
         ))}
       </div>
+      <div className="MerchWindow">
+        {merchitems.map((item) => (
+          <Merch key={item.sys.id} item={item} />
+        ))}
 
       <h1>Music</h1>
       <div className="SpotifyContainer">

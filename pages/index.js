@@ -27,23 +27,26 @@ export default function Index({ conserts, merchitems }) {
   return (
     <>
 
-      <h1>Concerts</h1>
+      <h2>Concerts</h2>
       <div className="ConsertWindow">
         {conserts.map((consert) => (
           <Conserts key={consert.sys.id} consert={consert} />
         ))}
       </div>
+
+      <h2>Merch</h2>
       <div className="MerchWindow">
         {merchitems.map((item) => (
           <Merch key={item.sys.id} item={item} />
         ))}
+      </div>
 
-      <h1>Music</h1>
+      <h2>Music</h2>
       <div className="SpotifyContainer">
         <Spotify />
       </div>
 
-      <h1>Instagram</h1>
+      <h2>Instagram</h2>
       <div className="InstaContiner">
         <Instagram />
       </div>

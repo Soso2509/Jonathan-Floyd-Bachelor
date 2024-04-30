@@ -4,7 +4,7 @@ export default function Merch({ item }) {
   const { itemName, itemLink, merchPicture } = item.fields;
 
   return (
-    <div>
+    <div className="boxContainer">
       <div className="featured">
         {merchPicture.fields.file.contentType == "video/mp4" ? (
           <iframe

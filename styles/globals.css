@@ -53,17 +53,23 @@ header h2 {
 footer {
   background: #111;
   color: #bbb;
-  padding: 40px;
   text-align: center;
-  margin-top: auto
+  margin: 0;
+  padding: 0;
+  padding: 40px 0;
+  margin-top: auto;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 nav {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
   background-color: #111;
   min-width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
   overflow: hidden;
   margin: 0;
   padding: 0 ;
@@ -90,20 +96,19 @@ nav .navPages {
   width: 100%;
 }
 
-
 .page-content {
   padding: 0 1rem;
   padding-top: 3rem;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-}
+} 
 
 .featured {
   display: block;
   overflow: hidden;
-  max-height: 150px;
-  height: 120px;
+  max-height: 200px;
+  height: 160px;
   width: 100%;
   align-content: center;
 }
@@ -113,7 +118,8 @@ nav .navPages {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
 }
 
 .consertImage {
@@ -122,10 +128,18 @@ nav .navPages {
   object-fit: cover;
 }
 
-.concertContainer {
+.MerchWindow {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.boxContainer {
   align-items: center;
   text-align: center;
-  width: 180px;
+  width: 250px;
   max-width: 350px;
   max-height: 500px;
   overflow: hidden;
@@ -157,11 +171,11 @@ nav .navPages {
     margin: 20px auto 80px;
   }
 
-  .concertContainer {
-    width: 250px;
+  .boxContainer {
+    width: 300px;
   }
   .featured {
     max-height: 200px;
-    height: 150px;
+    height: 200px;
   }
 }

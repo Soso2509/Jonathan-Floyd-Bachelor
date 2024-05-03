@@ -2,6 +2,7 @@ import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import HamburgerMenu from "./HamburgerMenu";
 
 export default function Layout({ children }) {
   const pathname = usePathname();
@@ -12,10 +13,12 @@ export default function Layout({ children }) {
           <header>
             <Header />
           </header>
-          <Navbar />
+          {/* <Navbar /> */}
+          <HamburgerMenu />
         </>
       ) : (
-        <Navbar />
+        //<Navbar />
+        <HamburgerMenu />
       )}
       <div className="page-content">{children}</div>
 

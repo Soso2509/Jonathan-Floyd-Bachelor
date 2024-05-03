@@ -25,13 +25,6 @@ export default function Navbar() {
       >
         Booking
       </a>
-      <a href="javascript:void(0);" className="icon" >
-        <Image 
-        src={hambureger}
-        className="HamburgerIcon"
-        alt="Hamburger menu icon"
-        />
-      </a>
       </div>
       
     </nav>

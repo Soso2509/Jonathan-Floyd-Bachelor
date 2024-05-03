@@ -21,7 +21,6 @@ export default function Layout({ children }) {
         <HamburgerMenu />
       )}
       <div className="page-content">{children}</div>
-
       <footer>
         <Footer />
       </footer>

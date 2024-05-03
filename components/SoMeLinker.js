@@ -1,6 +1,6 @@
 export default function SoMeLinker() {
   return (
-    <>
+    <div className="someLinker">
       <a href="https://www.instagram.com/jonathanfloydofficial/">Instagram</a>
       <a href="https://www.facebook.com/jonathanfloydofficial/">Facebook</a>
       <a href="https://www.tiktok.com/@jonathanfloydofficial">TikTok</a>
@@ -11,6 +11,6 @@ export default function SoMeLinker() {
       <a href="https://music.apple.com/no/artist/jonathan-floyd/335319803">
         iTunes
       </a>
-    </>
+    </div>
   );
 }

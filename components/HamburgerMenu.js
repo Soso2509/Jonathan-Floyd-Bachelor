@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
     }
 
     return(
-        <div className="navContainer">
+        <div className="navContainer disable-hamburger">
             <nav className="burger">
                 <div className="logo">
                     <Link href="/">

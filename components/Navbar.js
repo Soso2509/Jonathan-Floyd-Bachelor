@@ -6,7 +6,7 @@ import hambureger from '../components/images/hamburger_icon.png'
 export default function Navbar() {
   
   return (
-    <nav>
+    <nav className="disable-navbar">
       <div className="logo">
         <Link href="/">
           <Image

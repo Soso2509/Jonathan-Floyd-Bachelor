@@ -17,19 +17,19 @@ export default function Conserts({ consert }) {
     <div className="boxContainer">
       <div className="featured">
         <Image
-          className="consertImage"
+          className="boxMedia"
           src={"https:" + eventHeader.fields.file.url}
           width={eventHeader.fields.file.details.image.width}
           height={eventHeader.fields.file.details.image.height}
         />
       </div>
-      <div className="content">
+      <div className="boxContent">
         <h4>{eventName}</h4>
         <p>
           At <a href={eventLocationLink}>{eventPlaceName}</a>
         </p>
         <p>{moment(eventDate).format("LLL")}</p>
-        <a href={ticketsLink}>Tickets</a>
+        <a className="button" href={ticketsLink}>Tickets</a>
       </div>
     </div>
   );

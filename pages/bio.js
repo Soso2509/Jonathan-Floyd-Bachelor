@@ -28,14 +28,16 @@ export default function Bio({ bio }) {
     <>
       <div className="bioContainer">
         <Image
-          className="boxMedia"
+          className="boxMedia bioImg"
           src={"https:" + bioPhoto.fields.file.url}
           width={bioPhoto.fields.file.details.image.width}
           height={bioPhoto.fields.file.details.image.height}
         />
-        <h2>{title}</h2>
-        <SoMeLinker/>
-        <div>{documentToReactComponents(bioText)}</div>
+        <div className="bioContent">
+          <h2>{title}</h2>
+          <SoMeLinker/>
+          <div>{documentToReactComponents(bioText)}</div>
+        </div>
       </div>
     </>
   );

@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from '../components/images/Ikon_Thick_W.png'
+import Logo from '../components/images/Logo-liten.png'
+import NewWindowIcon from '../components/images/icons8-open-in-new-window-16.png'
 
 
 const HamburgerMenu = () => {
@@ -29,7 +30,7 @@ const HamburgerMenu = () => {
                     <Link href="/">
                     <Image
                     src={Logo}
-                    className="LogoIcon"
+                    className="LogoFull"
                     alt="Jonathan floyd's F icon"
                     />
                     </Link>
@@ -43,16 +44,26 @@ const HamburgerMenu = () => {
 
             <div className={menu_class}>
                 <div className="hamburgerLinks">
+                    <Link href="/">Home</Link>
+
                     <Link href="/bio">Bio</Link>
                 
                     <Link href="/media">Media</Link>
-                
-                    <a
+
+                    <div>
+                      <a
                     href={"https://unitedstage.no/artister/jonathan-floyd/"}
                     target="_blank"
+                        className="NewWindowIcon"
                     >
                     Booking
-                    </a>
+                    <Image
+                        src={NewWindowIcon}
+                        alt="Opens link in new window"
+                    />
+                    </a>  
+                    </div>
+                    
                 </div>
             </div>
         </div>

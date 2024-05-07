@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../components/images/Ikon_Thick_W.png'
-import hambureger from '../components/images/hamburger_icon.png'
 
 export default function Navbar() {
   
   return (
-    <nav className="disable-navbar">
+    <nav className="disable-navbar navBarContainer">
       <div className="logo">
         <Link href="/">
           <Image

@@ -18,28 +18,35 @@ export async function getStaticProps() {
       conserts: konsert.items,
       merchitems: merch.items,
     },
-    revalidate: 1
+    revalidate: 1,
   };
 }
 
 export default function Index({ conserts, merchitems }) {
-  console.log(merchitems);
   return (
     <>
       <h1>Live dates</h1>
-      <div className="Window">
 
-        {conserts.map((consert) => (
-          <Conserts key={consert.sys.id} consert={consert} />
-        ))}
-      </div>
+      {conserts.length == 0 ? (
+        <h2>More to come</h2>
+      ) : (
+        <div className="Window">
+          {conserts.map((consert) => (
+            <Conserts key={consert.sys.id} consert={consert} />
+          ))}
+        </div>
+      )}
 
       <h1>Merch</h1>
-      <div className="Window">
-        {merchitems.map((item) => (
-          <Merch key={item.sys.id} item={item} />
-        ))}
-      </div>
+      {merchitems.length == 0 ? (
+        <h2>More to come</h2>
+      ) : (
+        <div className="Window">
+          {merchitems.map((item) => (
+            <Merch key={item.sys.id} item={item} />
+          ))}
+        </div>
+      )}
 
       <h1>Music</h1>
       <div className="SpotifyContainer">
@@ -51,5 +58,5 @@ export default function Index({ conserts, merchitems }) {
         <Instagram />
       </div>
     </>
-  )
+  );
 }

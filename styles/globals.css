@@ -170,6 +170,20 @@ nav > .logo {
   text-align: center;
 }
 
+nav a:hover {
+  color: var(--BtnCl);
+}
+
+nav a:hover .LogoIcon{
+  filter: drop-shadow(0px 1000px 0 var(--BtnCl));
+  transform: translateY(-1000px);
+}
+
+.active {
+  filter: drop-shadow(0px 1000px 0 var(--BtnCl));
+  transform: translateY(-1000px);
+}
+
 /* Burger nav */
 .navContainer {
   width: 100%;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-  --bgCl: #111; 
+  --bgCl: #0000; 
   --bgClSeethru: rgba(0,0,0,0.80);
   --boxColour: #282828;
   --textCl: #fff;
@@ -19,8 +19,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  font-variation-settings: "slnt" 0;
 }
 
 html {
@@ -29,14 +28,19 @@ html {
   min-width: 100%;
 }
 body {
-  background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
+  background-image: url("BackgroundImage/Mobil_bakgrunn.png");
+  background-color: var(--bgCl);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: block;
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:"slnt" 0;
   font-size: 14pt;
   color: var(--textCl);
   align-items: center;
@@ -103,8 +107,15 @@ footer {
   width: 100%;
   justify-content: space-between;
 }
+footer a:link {
+  text-decoration: underline;
+}
+footer a:visited {
+  color: var(--BtnCl);
+}
+
 .backgroundImg {
-  background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
+  background-image: url("BackgroundImage/Mobil_bakgrunn.png");
   width: 100dvw;
   height: 100dvh;
   position: fixed;
@@ -116,7 +127,6 @@ footer {
 /* Navbar */
 nav {
   display: inline-flex;
-  align-items: center;
   justify-content: space-between;
   background-color: #111;
   min-width: 100%;
@@ -131,14 +141,48 @@ nav {
 }
 nav > .logo {
   float: left;
+  overflow: hidden;
+  margin-left: 2rem;
 }
-nav .navPages {
+.navPages {
+  display: flex;
+  width: 60%;
   justify-content: space-between;
+  margin: 3rem;
 }
+.navBarContainer {
+  align-items: center;
+}
+
 .LogoIcon {
   width: 64px;
   height: 64px;
   margin: 0.5rem;
+}
+.LogoFull {
+  margin: 0;
+  height: 100%;
+  float: left;
+  object-fit: contain;
+  width: fit-content;
+}
+.NewWindowIcon {
+  display: inline-flex;
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--BtnCl);
+}
+
+nav a:hover .LogoIcon{
+  filter: drop-shadow(0px 1000px 0 var(--BtnCl));
+  transform: translateY(-1000px);
+}
+
+.active {
+  filter: drop-shadow(0px 1000px 0 var(--BtnCl));
+  transform: translateY(-1000px);
 }
 
 /* Burger nav */
@@ -153,8 +197,7 @@ nav .navPages {
 }
 .burger {
   height: 3rem;
-  padding: 1.1rem 0;
-  margin-right: 1rem;
+  padding: 0.5rem 0;
   width: 100%;
   overflow: hidden;
 }
@@ -164,13 +207,13 @@ nav .navPages {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   cursor: pointer;
   margin-right: 1rem;
 }
 .burger-bar {
-  width:  4rem;
-  height: 0.4rem;
+  width:  3.5rem;
+  height: 0.35rem;
   background-color: var(--textCl);
   border-radius: 0.5rem;
 }
@@ -181,8 +224,9 @@ nav .navPages {
   background: rgba(0,0,0,0.80);
   top: 0;
   z-index: -1;
-  margin-right: 1rem;
   height: 100vh;
+  max-height: 100vh;
+  margin: 0;
 }
 .hamburgerLinks {
   color: var(--textCl);
@@ -192,8 +236,10 @@ nav .navPages {
   height: 100vh;
   opacity: 150%;
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 35px;
+  margin: 1rem ;
+  justify-items:center;
 }
 
 a:-webkit-any-link {
@@ -211,7 +257,7 @@ a:-webkit-any-link {
 
 /* Burger animations */
 .burger-bar.clicked:nth-child(1){
-  transform: rotate(45deg) translate(0.75rem, 1.25rem);
+  transform: rotate(45deg) translate(0.75rem, 0.75rem);
   transition: ease-out 0.5s;
 }
 
@@ -221,7 +267,7 @@ a:-webkit-any-link {
 }
 
 .burger-bar.clicked:nth-child(3){
-  transform: rotate(135deg) translate(-0.5rem, 1rem);
+  transform: rotate(135deg) translate(-0.65rem, 0.75rem);
   transition: ease-out 0.5s;
 }
 
@@ -351,6 +397,9 @@ a:-webkit-any-link {
 }
 
 @media only screen and (min-width: 700px){
+  body {
+    background-position:center;
+  }
   .disable-hamburger {
     display: none;
   }

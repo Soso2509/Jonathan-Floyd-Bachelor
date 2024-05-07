@@ -18,6 +18,7 @@ export async function getStaticProps() {
       conserts: konsert.items,
       merchitems: merch.items,
     },
+    revalidate: 1
   };
 }
 

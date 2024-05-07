@@ -13,21 +13,21 @@ export async function getStaticProps() {
   const konsert = await client.getEntries({ content_type: "concert" });
   const merch = await client.getEntries({ content_type: "merchItem" });
 
-
   return {
     props: {
       conserts: konsert.items,
-      merchitems:merch.items,
+      merchitems: merch.items,
     },
   };
 }
 
 export default function Index({ conserts, merchitems }) {
-  console.log(merchitems)
+  console.log(merchitems);
   return (
     <>
       <h1>Live dates</h1>
       <div className="Window">
+
         {conserts.map((consert) => (
           <Conserts key={consert.sys.id} consert={consert} />
         ))}
@@ -52,5 +52,3 @@ export default function Index({ conserts, merchitems }) {
     </>
   )
 }
-
-

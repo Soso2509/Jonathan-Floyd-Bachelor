@@ -17,6 +17,7 @@ export async function getStaticProps() {
     props: {
       bio: res.items,
     },
+    revalidate: 1,
   };
 }
 

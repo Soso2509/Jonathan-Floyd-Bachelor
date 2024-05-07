@@ -61,7 +61,7 @@ header {
   align-items: center;
 }
 .headerConteiner {
-  height: calc(100vh - 80px);
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -100,7 +100,6 @@ h1 {
   font-style: normal;
 }
 footer {
-  background: var(--bgCl);
   color: #bbb;
   text-align: center;
   margin: 0;
@@ -404,6 +403,9 @@ a:-webkit-any-link {
   }
   .disable-hamburger {
     display: none;
+  }
+  .headerConteiner {
+    height: calc(100vh - 80px);
   }
   body {
     font-size: 18pt;

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../components/images/Ikon_Thick_W.png'
+import NewWindowIcon from '../components/images/icons8-open-in-new-window-16.png'
+
 
 export default function Navbar() {
   
@@ -18,12 +20,20 @@ export default function Navbar() {
       <div className="navPages">
         <Link href="/bio">Bio</Link>
       <Link href="/media">Media</Link>
-      <a
-        href={"https://unitedstage.no/artister/jonathan-floyd/"}
-        target="_blank"
-      >
-        Booking
-      </a>
+      <div>
+        <a
+          href={"https://unitedstage.no/artister/jonathan-floyd/"}
+          target="_blank"
+          className="NewWindowIcon"
+        >
+          Booking
+          <Image
+            src={NewWindowIcon}
+            alt="Opens link in new window"
+          />
+        </a>
+      </div>
+      
       </div>
       
     </nav>

@@ -106,6 +106,13 @@ footer {
   width: 100%;
   justify-content: space-between;
 }
+footer a:link {
+  text-decoration: underline;
+}
+footer a:visited {
+  color: var(--BtnCl);
+}
+
 .backgroundImg {
   background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
   width: 100dvw;
@@ -134,10 +141,18 @@ nav {
 nav > .logo {
   float: left;
   overflow: hidden;
+  margin-left: 2rem;
 }
-nav .navPages {
+.navPages {
+  display: flex;
+  width: 60%;
   justify-content: space-between;
+  margin: 3rem;
 }
+.navBarContainer {
+  align-items: center;
+}
+
 .LogoIcon {
   width: 64px;
   height: 64px;
@@ -149,7 +164,6 @@ nav .navPages {
   float: left;
   object-fit: contain;
   width: fit-content;
-  margin-left: 1rem;
 }
 .NewWindowIcon {
   display: inline-flex;

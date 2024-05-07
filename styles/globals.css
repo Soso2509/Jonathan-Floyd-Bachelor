@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --bgCl: #111; 
+  --bgClSeethru: rgba(0,0,0,0.80);
+  --boxColour: #282828;
+  --textCl: #fff;
+  --BoxBRadius: 5px;
+  --BtnCl: #00AAAA;
+}
+
+html {
+  margin: 0;
+  height: 100%;
+  min-width: 100%;
+}
+body {
+  background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 14pt;
+  color: var(--textCl);
+  align-items: center;
+  min-width: 100%;
+}
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+header {
+  text-align: center;
+  margin: 60px 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.headerConteiener {
+  display: block;
+  height: 100svh;
+  max-height: 100vh;
+  overflow: hidden;
+
+}
+header a {
+  text-decoration: none;
+  color: var(--bgCl);
+  text-transform: uppercase;
+  display: inline-block;
+}
+header h1, header h2 {
+  margin: 0;
+}
+header span:first-child {
+  font-size: 1em;
+  font-weight: 400;
+}
+header span:last-child {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+header h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+footer {
+  background: var(--bgCl);
+  color: #bbb;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding: 40px 0;
+  margin-top: auto;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+.backgroundImg {
+  background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+}
+.someLinker {
+  margin: 1rem 1rem;
+}
+
+/* Navbar */
+nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #111;
+  min-width: 100%;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 ;
+  font-size: 20pt;
+  height: 5rem;
+  width: 100%;
+}
+nav > .logo {
+  float: left;
+}
+nav .navPages {
+  justify-content: space-between;
+}
+.LogoIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0.5rem;
+}
+
+/* Burger nav */
+.navContainer {
+  width: 100%;
+  max-height: 100vh;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+.burger {
+  height: 3rem;
+  padding: 1.1rem 0;
+  margin-right: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+.burger-menu {
+  height: 100%;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.burger-bar {
+  width:  4rem;
+  height: 0.4rem;
+  background-color: var(--textCl);
+  border-radius: 0.5rem;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0,0,0,0.80);
+  top: 0;
+  z-index: -1;
+  margin-right: 1rem;
+  height: 100vh;
+}
+.hamburgerLinks {
+  color: var(--textCl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  opacity: 150%;
+  text-align: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* Burger animations */
+.burger-bar.clicked:nth-child(1){
+  transform: rotate(45deg) translate(0.75rem, 1.25rem);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2){
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3){
+  transform: rotate(135deg) translate(-0.5rem, 1rem);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition:  0.5s;
+}
+
+/* SoMe */
+.SoMeIcon {
+  margin: 0 0.5rem;
+}
+
+/* Index page content */
+.HeaderImg {
+  height: 100%;
+  width: 100%;
+  object-fit:fill;
+}
+
+.InstaContiner {
+  width: 100%;
+  height: 100%;
+}
+.Insta {
+  width: 100%;
+  height: 70vh;
+}
+
+.page-content {
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+} 
+
+.featured {
+  display: block;
+  overflow: hidden;
+  max-height: 312px;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+}
+
+.Window {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.boxMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boxContent {
+  height: 100%;
+  justify-content: space-between;
+  justify-items:center;
+}
+
+.boxContent p {
+  margin: 0.5rem;
+}
+
+.boxContent h4 {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.boxContainer {
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 400px;
+  max-width: 350px;
+  max-height: 500px;
+  overflow: hidden;
+  margin: 1rem 0.5rem;
+  background-color: var(--boxColour);
+  border-radius: var(--BoxBRadius);
+  border: var(--boxColour) solid 10px;
+  padding-bottom: 1rem;
+}
+
+.button{
+  background-color: var(--BtnCl);
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 20pt;
+  border-radius: var(--BoxBRadius);
+}
+
+
+.spotifyContent {
+  width: 100%;
+  height: 740px;
+  border: none;
+  border-radius: var(--BoxBRadius);
+
+}
+
+/* Bio content */
+.bioContainer {
+  margin-top: 6rem;
+}
+.bioContent {
+  background-color: var(--bgClSeethru);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--BoxBRadius);
+}
+.bioImg {
+  border-radius: var(--BoxBRadius);
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 700px){
+  .disable-hamburger {
+    display: none;
+  }
+  body {
+    font-size: 18pt;
+    display: block;
+  }
+  .page-content {
+    max-width: 1200px;
+    margin: 20px auto 80px;
+  }
+
+  .boxContainer {
+    width: 300px;
+  }
+  .featured {
+    max-height: 200px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .disable-navbar {
+    display: none;
+  }
+}

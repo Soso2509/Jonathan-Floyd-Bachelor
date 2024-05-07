@@ -4,10 +4,11 @@ export default function Merch({ item }) {
   const { itemName, itemLink, merchPicture } = item.fields;
 
   return (
-    <div>
+    <div className="boxContainer">
       <div className="featured">
         {merchPicture.fields.file.contentType == "video/mp4" ? (
           <iframe
+            className="boxMedia"
             src={"https:" + merchPicture.fields.file.url+"?autostart=false"}
             frameborder="0"
             width="50%"
@@ -17,7 +18,7 @@ export default function Merch({ item }) {
           />
         ) : (
           <Image
-            className="merchImage"
+            className="boxMedia"
             src={"https:" + merchPicture.fields.file.url}
             alt={merchPicture.fields.description}
             width={merchPicture.fields.file.details.image.width}
@@ -25,9 +26,9 @@ export default function Merch({ item }) {
           />
         )}
       </div>
-      <div className="content">
+      <div className="boxContent">
         <h4>{itemName}</h4>
-        <a href={itemLink}>Buy Here</a>
+        <a className="button" href={itemLink}>Buy Here</a>
       </div>
     </div>
   );

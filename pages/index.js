@@ -25,13 +25,16 @@ export default function Index({ conserts, merchitems }) {
   console.log(merchitems);
   return (
     <>
-      <h1>Concerts</h1>
-      <div className="ConsertWindow">
+      <h1>Live dates</h1>
+      <div className="Window">
+
         {conserts.map((consert) => (
           <Conserts key={consert.sys.id} consert={consert} />
         ))}
       </div>
-      <div className="MerchWindow">
+
+      <h1>Merch</h1>
+      <div className="Window">
         {merchitems.map((item) => (
           <Merch key={item.sys.id} item={item} />
         ))}
@@ -47,5 +50,5 @@ export default function Index({ conserts, merchitems }) {
         <Instagram />
       </div>
     </>
-  );
+  )
 }

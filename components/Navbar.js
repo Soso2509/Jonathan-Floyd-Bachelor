@@ -6,7 +6,7 @@ import hambureger from '../components/images/hamburger_icon.png'
 export default function Navbar() {
   
   return (
-    <nav>
+    <nav className="disable-navbar">
       <div className="logo">
         <Link href="/">
           <Image
@@ -24,13 +24,6 @@ export default function Navbar() {
         target="_blank"
       >
         Booking
-      </a>
-      <a href="javascript:void(0);" className="icon" >
-        <Image 
-        src={hambureger}
-        className="HamburgerIcon"
-        alt="Hamburger menu icon"
-        />
       </a>
       </div>
       

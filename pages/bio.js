@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 import Image from "next/image";
+import SoMeLinker from "../components/SoMeLinker";
+
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -24,15 +26,18 @@ export default function Bio({ bio }) {
   const { bioPhoto, title, slug, bioText } = bio[0].fields;
   return (
     <>
-      <div>
+      <div className="bioContainer">
         <Image
-          className="consertImage"
+          className="boxMedia bioImg"
           src={"https:" + bioPhoto.fields.file.url}
           width={bioPhoto.fields.file.details.image.width}
           height={bioPhoto.fields.file.details.image.height}
         />
-        <h2>{title}</h2>
-        <div>{documentToReactComponents(bioText)}</div>
+        <div className="bioContent">
+          <h2>{title}</h2>
+          <SoMeLinker/>
+          <div>{documentToReactComponents(bioText)}</div>
+        </div>
       </div>
     </>
   );

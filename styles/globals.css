@@ -28,7 +28,7 @@ html {
   min-width: 100%;
 }
 body {
-  background-image: url("BackgroundImage/Mobil_bakgrunn.png");
+  background-image: url("BackgroundImage/bakgrunn1.png");
   background-color: var(--bgCl);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -55,18 +55,23 @@ body {
 }
 header {
   text-align: center;
-  margin: 60px 0;
   height: 100%;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-.headerConteiener {
-  display: block;
-  height: 100svh;
-  max-height: 100vh;
-  overflow: hidden;
-
+.headerConteiner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.headerElementer {
+  width: 100%;
+  align-items: center;
+}
+.HeaderLogo {
+  width: 100%;
+  height: auto;
 }
 header a {
   text-decoration: none;
@@ -95,7 +100,6 @@ h1 {
   font-style: normal;
 }
 footer {
-  background: var(--bgCl);
   color: #bbb;
   text-align: center;
   margin: 0;
@@ -283,9 +287,7 @@ a:-webkit-any-link {
 
 /* Index page content */
 .HeaderImg {
-  height: 100%;
-  width: 100%;
-  object-fit:fill;
+  z-index: -1;
 }
 
 .InstaContiner {
@@ -372,7 +374,6 @@ a:-webkit-any-link {
   height: 740px;
   border: none;
   border-radius: var(--BoxBRadius);
-
 }
 
 /* Bio content */
@@ -402,6 +403,9 @@ a:-webkit-any-link {
   }
   .disable-hamburger {
     display: none;
+  }
+  .headerConteiner {
+    height: calc(100vh - 80px);
   }
   body {
     font-size: 18pt;

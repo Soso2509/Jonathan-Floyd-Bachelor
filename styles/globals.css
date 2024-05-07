@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-  --bgCl: #111; 
+  --bgCl: #0000; 
   --bgClSeethru: rgba(0,0,0,0.80);
   --boxColour: #282828;
   --textCl: #fff;
@@ -28,7 +28,8 @@ html {
   min-width: 100%;
 }
 body {
-  background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
+  background-image: url("BackgroundImage/Mobil_bakgrunn.png");
+  background-color: var(--bgCl);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +38,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-variation-settings:"slnt" 0;
   font-size: 14pt;
@@ -114,7 +115,7 @@ footer a:visited {
 }
 
 .backgroundImg {
-  background-image: url("BackgroundImage/blue-background-7470781_640.jpg");
+  background-image: url("BackgroundImage/Mobil_bakgrunn.png");
   width: 100dvw;
   height: 100dvh;
   position: fixed;
@@ -159,8 +160,8 @@ nav > .logo {
   margin: 0.5rem;
 }
 .LogoFull {
-  height: 3rem;
   margin: 0;
+  height: 100%;
   float: left;
   object-fit: contain;
   width: fit-content;
@@ -195,8 +196,8 @@ nav a:hover .LogoIcon{
   box-sizing: 0;
 }
 .burger {
-  height: 2.5rem;
-  padding: 0.8rem 0;
+  height: 3rem;
+  padding: 0.5rem 0;
   width: 100%;
   overflow: hidden;
 }
@@ -206,13 +207,13 @@ nav a:hover .LogoIcon{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   cursor: pointer;
   margin-right: 1rem;
 }
 .burger-bar {
-  width:  4rem;
-  height: 0.4rem;
+  width:  3.5rem;
+  height: 0.35rem;
   background-color: var(--textCl);
   border-radius: 0.5rem;
 }
@@ -266,7 +267,7 @@ a:-webkit-any-link {
 }
 
 .burger-bar.clicked:nth-child(3){
-  transform: rotate(135deg) translate(-0.75rem, 0.75rem);
+  transform: rotate(135deg) translate(-0.65rem, 0.75rem);
   transition: ease-out 0.5s;
 }
 
@@ -396,6 +397,9 @@ a:-webkit-any-link {
 }
 
 @media only screen and (min-width: 700px){
+  body {
+    background-position:center;
+  }
   .disable-hamburger {
     display: none;
   }

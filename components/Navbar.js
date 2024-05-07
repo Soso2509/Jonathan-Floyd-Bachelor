@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from '../components/images/Ikon_Thick_W.png'
+import Logo from '../components/images/Ikon_Thick_W_liten100.png'
 import NewWindowIcon from '../components/images/icons8-open-in-new-window-16.png'
 
 

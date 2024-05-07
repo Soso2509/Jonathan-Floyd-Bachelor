@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from '../components/images/Logo-liten.png'
-import NewWindowIcon from '../components/images/icons8-open-in-new-window-16.png'
+import Logo from './images/Ikon_Thick_W_liten100.png'
+import NewWindowIcon from './images/icons8-open-in-new-window-16.png'
 
 
 const HamburgerMenu = () => {
@@ -44,7 +44,7 @@ const HamburgerMenu = () => {
 
             <div className={menu_class}>
                 <div className="hamburgerLinks">
-                    <Link href="/">Home</Link>
+                    <Link  href="/">Home</Link>
 
                     <Link href="/bio">Bio</Link>
                 

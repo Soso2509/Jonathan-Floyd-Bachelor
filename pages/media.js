@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import Image from "next/image";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -6,19 +7,24 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const bilder = await client.getEntries({ content_type: "gallery" });
-  const video = await client.getEntries({ content_type: "videos" });
+  const pic = await client.getEntries({ content_type: "pictures" });
+  const vid = await client.getEntries({
+    content_type: "videos",
+    order: "-fields.datePublished",
+  }); //For decending order:'-fields.eventDate'
 
   return {
     props: {
-      gallery: bilder.items,
-      videos: video.items,
+      pictures: pic.items,
+      videos: vid.items,
     },
-    revalidate: 1
+    revalidate: 1,
   };
 }
 
-export default function Media() {
+export default function Media({ videos, pictures }) {
+  console.log(pictures);
+  //console.log(pictures);
 
   return (
     <>
@@ -26,6 +32,18 @@ export default function Media() {
         <h1>Video</h1>
 
         <h1>Bilder</h1>
+        {pictures.map((pic) => (
+          <div key={pic.fields.slug} >
+            <Image
+              new
+              className="boxMedia"
+              src={"https:" + pic.fields.picture.fields.file.url}
+              alt={pic.fields.alttext}
+              width={pic.fields.picture.fields.file.details.image.width}
+              height={pic.fields.picture.fields.file.details.image.height}
+            />
+          </div>
+        ))}
       </div>
     </>
   );

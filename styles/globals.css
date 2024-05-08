@@ -6,7 +6,7 @@
   --boxColour: #282828;
   --textCl: #fff;
   --BoxBRadius: 1rem;
-  --BtnRadius: 2%;
+  --BtnRadius: 5%;
   --TurqCl: #00AAAA;
 }
 
@@ -42,7 +42,6 @@ body {
   font-weight: 300;
   font-style: normal;
   font-variation-settings:"slnt" 0;
-  font-size: 14pt;
   color: var(--textCl);
   align-items: center;
   min-width: 100%;
@@ -53,6 +52,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-size: 14pt;
 }
 header {
   text-align: center;
@@ -100,6 +100,11 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
+/* h2 {
+  font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
 footer {
   color: #bbb;
   text-align: center;
@@ -121,10 +126,14 @@ footer a:hover {
 footer a:visited {
   color: var(--TurqCl);
 }
-
+footer p {
+  font-size: 12pt;
+}
 .someLinker {
   margin: 1rem 1rem;
 }
+
+
 
 
 /* Navbar */
@@ -365,10 +374,10 @@ a:-webkit-any-link {
 
 .button{
   background-color: var(--TurqCl);
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   padding: 0.2rem 0.5rem;
   font-size: 20pt;
-  border-radius: var(--BoxBRadius);
+  border-radius: var(--BtnRadius);
 }
 
 
@@ -382,6 +391,7 @@ a:-webkit-any-link {
 /* Bio Page */
 .bioPageConteiner{
   margin-top: 6rem;
+  line-height: 1.4;
 }
 .bioContainer {
   margin-top: 1rem;
@@ -415,6 +425,11 @@ a:-webkit-any-link {
 /* Media Page */
 .mediaContainer {
   margin-top: 5rem;
+}
+
+/* Privacy policy & accsessability statement */
+.policyContainer {
+  margin-top: 6rem;
 }
 
 @media only screen and (min-width: 700px){
@@ -476,6 +491,15 @@ a:-webkit-any-link {
   /* Insta */
   .Insta {
 
+  }
+
+  /* Privacy policy & accsessability statement */
+  .policyContainer {
+    margin: 0;
+    margin: 0 10%;
+  }
+  .policyContainer ul {
+    list-style: none;
   }
 }
 

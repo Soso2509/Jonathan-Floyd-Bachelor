@@ -28,7 +28,7 @@ html {
   min-width: 100%;
 }
 body {
-  background-image: url("BackgroundImage/bakgrunn1.png");
+  background-image: url("/BackgroundImage/bakgrunn1.png");
   background-color: var(--bgCl);
   background-attachment: fixed;
   background-repeat: no-repeat;

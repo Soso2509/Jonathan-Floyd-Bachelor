@@ -26,20 +26,20 @@ export default function Bio({ bio }) {
 
   const { bioPhoto, title, slug, bioText } = bio[0].fields;
   return (
-    <>
+    <div className="bioPageConteiner"> 
       <div className="bioContainer">
         <Image
-          className="boxMedia bioImg"
+          className=" bioImg grid-item"
           src={"https:" + bioPhoto.fields.file.url}
           width={bioPhoto.fields.file.details.image.width}
           height={bioPhoto.fields.file.details.image.height}
-        />
-        <div className="bioContent">
+        />          
+        <div className="bioContent grid-item">       
           <h1>{title}</h1>
           <SoMeLinker/>
           <div>{documentToReactComponents(bioText)}</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

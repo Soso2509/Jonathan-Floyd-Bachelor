@@ -175,7 +175,7 @@ nav > .logo {
   text-align: center;
 }
 
-a:hover {
+nav a:hover {
   color: var(--BtnCl);
 }
 

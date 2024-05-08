@@ -25,8 +25,8 @@ export async function getStaticProps() {
 export default function Index({ conserts, merchitems }) {
   return (
     <>
+    <div className="">
       <h1>Live dates</h1>
-
       {conserts.length == 0 ? (
         <h2>More to come</h2>
       ) : (
@@ -36,7 +36,9 @@ export default function Index({ conserts, merchitems }) {
           ))}
         </div>
       )}
-
+    </div>
+      
+    <div className="indexElement">
       <h1>Merch</h1>
       {merchitems.length == 0 ? (
         <h2>More to come</h2>
@@ -47,16 +49,22 @@ export default function Index({ conserts, merchitems }) {
           ))}
         </div>
       )}
-
+    </div>
+      
+    <div className="indexElement">
       <h1>Music</h1>
       <div className="SpotifyContainer">
         <Spotify />
       </div>
-
+    </div>
+      
+    <div className="indexElement">
       <h1>Instagram</h1>
       <div className="InstaContiner">
         <Instagram />
       </div>
+    </div>
+      
     </>
   );
 }

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import NewWindowIcon from './SoMeIcons/icons8-open-in-new-window-16.png'
+
 
 export default function Merch({ item }) {
   const { itemName, itemLink, merchPicture } = item.fields;
@@ -19,7 +21,7 @@ export default function Merch({ item }) {
           />
         ) : (
           <Image
-            className="boxMedia"
+            className="boxMedia merchMedia"
             src={"https:" + merchPicture.fields.file.url}
             alt={merchPicture.fields.description}
             width={merchPicture.fields.file.details.image.width}
@@ -29,8 +31,11 @@ export default function Merch({ item }) {
       </div>
       <div className="boxContent">
         <h4>{itemName}</h4>
-        <a className="button" href={itemLink}>Buy Here</a>
       </div>
+        <a className="button" href={itemLink}>Buy here<Image
+            src={NewWindowIcon}
+            alt="Opens link in new window"
+          /></a>
     </div>
   );
 }

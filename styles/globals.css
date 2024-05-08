@@ -5,9 +5,11 @@
   --bgClSeethru: rgba(0,0,0,0.80);
   --boxColour: #282828;
   --textCl: #fff;
-  --BoxBRadius: 1rem;
+  --BoxBRadius: 3%;
   --BtnRadius: 0.4rem;
   --TurqCl: #00AAAA;
+  --mediumTurqCl: #008080;
+  --darkTurqCl: #005555;
 }
 
 .new-rocker-regular {
@@ -120,11 +122,11 @@ footer {
 footer a:link {
   text-decoration: underline;
 }
-footer a:hover {
-  color: var(--TurqCl);
-}
 footer a:visited {
   color: var(--TurqCl);
+}
+footer a:hover {
+  color: var(--mediumTurqCl);
 }
 footer p {
   font-size: 12pt;
@@ -335,9 +337,8 @@ a:-webkit-any-link {
 .featured {
   display: block;
   overflow: hidden;
-  height: 312px;
+  height: 200px;
   max-height: 312px;
-  height: 100%;
   width: 100%;
   align-content: center;
 }
@@ -354,13 +355,14 @@ a:-webkit-any-link {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: var(--BoxBRadius);
 }
 
 .boxContent {
   height: 100%;
   justify-content: space-between;
   justify-items:center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .boxContent p {
@@ -372,12 +374,22 @@ a:-webkit-any-link {
   margin-top: 0.5rem;
 }
 
+.boxContent a:link{
+  text-decoration: underline;
+}
+.boxContent a:hover{
+  color: var(--mediumTurqCl);
+}
+.boxContent a:visited{
+  color: var(--TurqCl);
+}
+
 .boxContainer {
   align-items: center;
   text-align: center;
   width: 250px;
   height: fit-content;
-  max-width: 350px;
+  max-width: 300px;
   max-height: 500px;
   overflow: hidden;
   margin: 1rem 0.5rem;
@@ -387,12 +399,22 @@ a:-webkit-any-link {
   padding-bottom: 1rem;
 }
 
+.merchMedia {
+}
+
 .button{
-  background-color: var(--TurqCl);
+  background-color: var(--mediumTurqCl);
   margin-top: 1rem;
   padding: 0.2rem 0.5rem;
-  font-size: 20pt;
+  font-size: 18pt;
   border-radius: var(--BtnRadius);
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  font-family: "New Rocker", system-ui;
+}
+.button:hover {
+  background-color: var(--darkTurqCl);
 }
 
 
@@ -416,11 +438,11 @@ a:-webkit-any-link {
 .bioContent a:link {
   text-decoration: underline;
 }
-.bioContent a:hover {
-  color: var(--TurqCl);
-}
 .bioContent a:visited {
   color: var(--TurqCl);
+}
+.bioContent a:hover {
+  color: var(--mediumTurqCl);
 }
 .bioImg {
   border-radius: var(--BoxBRadius);
@@ -460,7 +482,7 @@ a:-webkit-any-link {
   }
 
   .boxContainer {
-    width: 300px;
+    width: 250px;
   }
   .featured {
     max-height: 200px;

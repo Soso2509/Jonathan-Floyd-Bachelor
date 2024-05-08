@@ -6,7 +6,8 @@
   --boxColour: #282828;
   --textCl: #fff;
   --BoxBRadius: 1rem;
-  --BtnCl: #00AAAA;
+  --BtnRadius: 2%;
+  --TurqCl: #00AAAA;
 }
 
 .new-rocker-regular {
@@ -28,7 +29,7 @@ html {
   min-width: 100%;
 }
 body {
-  background-image: url("BackgroundImage/bakgrunn1.png");
+  background-image: url("/BackgroundImage/bakgrunn1.png");
   background-color: var(--bgCl);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -115,18 +116,12 @@ footer a:link {
   text-decoration: underline;
 }
 footer a:hover {
-  color: var(--BtnCl);
+  color: var(--TurqCl);
 }
 footer a:visited {
-  color: var(--BtnCl);
+  color: var(--TurqCl);
 }
 
-.backgroundImg {
-  background-image: url("BackgroundImage/Mobil_bakgrunn.png");
-  width: 100dvw;
-  height: 100dvh;
-  position: fixed;
-}
 .someLinker {
   margin: 1rem 1rem;
 }
@@ -180,16 +175,16 @@ nav > .logo {
 }
 
 nav a:hover {
-  color: var(--BtnCl);
+  color: var(--TurqCl);
 }
 
 nav a:hover .LogoIcon{
-  filter: drop-shadow(0px 1000px 0 var(--BtnCl));
+  filter: drop-shadow(0px 1000px 0 var(--TurqCl));
   transform: translateY(-1000px);
 }
 
 .active {
-  filter: drop-shadow(0px 1000px 0 var(--BtnCl));
+  filter: drop-shadow(0px 1000px 0 var(--TurqCl));
   transform: translateY(-1000px);
 }
 
@@ -369,7 +364,7 @@ a:-webkit-any-link {
 }
 
 .button{
-  background-color: var(--BtnCl);
+  background-color: var(--TurqCl);
   margin-top: 0.5rem;
   padding: 0.2rem 0.5rem;
   font-size: 20pt;
@@ -404,10 +399,10 @@ a:-webkit-any-link {
   text-decoration: underline;
 }
 .bioContent a:hover {
-  color: var(--BtnCl);
+  color: var(--TurqCl);
 }
 .bioContent a:visited {
-  color: var(--BtnCl);
+  color: var(--TurqCl);
 }
 .bioImg {
   border-radius: var(--BoxBRadius);

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-  --bgCl: #0000; 
+  --bgCl: #0000;
   --bgClSeethru: rgba(0,0,0,0.80);
   --boxColour: #282828;
   --textCl: #fff;
@@ -28,7 +28,7 @@ html {
   min-width: 100%;
 }
 body {
-  background-image: url("/BackgroundImage/bakgrunn1.png");
+  background-image: url("BackgroundImage/bakgrunn1.png");
   background-color: var(--bgCl);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -312,7 +312,7 @@ a:-webkit-any-link {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-} 
+}
 
 .featured {
   display: block;
@@ -470,17 +470,17 @@ a:-webkit-any-link {
   .bioPageConteiner .someLinker {
     margin: 1rem 0;
   }
-  
+
   .bioContent {
-    
+
   }
   .bioImg{
     object-fit: cover;
   }
- 
+
   /* Insta */
   .Insta {
-    
+
   }
 }
 

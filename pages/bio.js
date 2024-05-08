@@ -17,6 +17,7 @@ export async function getStaticProps() {
     props: {
       bio: res.items,
     },
+    revalidate: 1,
   };
 }
 
@@ -34,7 +35,7 @@ export default function Bio({ bio }) {
           height={bioPhoto.fields.file.details.image.height}
         />
         <div className="bioContent">
-          <h2>{title}</h2>
+          <h1>{title}</h1>
           <SoMeLinker/>
           <div>{documentToReactComponents(bioText)}</div>
         </div>

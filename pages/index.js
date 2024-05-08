@@ -10,7 +10,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const konsert = await client.getEntries({ content_type: "concert" });
+  const konsert = await client.getEntries({ content_type: "concert",order:'fields.eventDate' });
   const merch = await client.getEntries({ content_type: "merchItem" });
 
   return {
@@ -31,7 +31,7 @@ export default function Index({ conserts, merchitems }) {
         <h2>More to come</h2>
       ) : (
         <div className="Window">
-          {conserts.map((consert) => (
+          {conserts.map((consert,i) => (
             <Conserts key={consert.sys.id} consert={consert} />
           ))}
         </div>

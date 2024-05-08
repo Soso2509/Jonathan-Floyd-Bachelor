@@ -177,7 +177,7 @@ nav > .logo {
   margin: 0;
   height: 100%;
   float: left;
-  object-fit: contain;
+  object-fit:contain;
   width: fit-content;
 }
 .NewWindowIcon {
@@ -189,9 +189,13 @@ nav a:hover {
   color: var(--TurqCl);
 }
 
-nav a:hover .LogoIcon{
+nav .LogoIcon:hover{
   filter: drop-shadow(0px 1000px 0 var(--TurqCl));
   transform: translateY(-1000px);
+}
+nav a {
+  display: flex;
+  height: 100%;
 }
 
 .active {

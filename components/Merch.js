@@ -29,8 +29,8 @@ export default function Merch({ item }) {
       </div>
       <div className="boxContent">
         <h4>{itemName}</h4>
-        <a className="button" href={itemLink}>Buy Here</a>
       </div>
+        <a className="button" href={itemLink}>Buy Here</a>
     </div>
   );
 }

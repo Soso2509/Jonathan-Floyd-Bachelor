@@ -31,8 +31,8 @@ export default function Media({ videos, pictures }) {
         <div className="videoConteiner">
           <h1>Video</h1>
           <div className=" videoGalleri">
-            {videos.map((mv) => (
-            <div key={mv.sys.id}>
+            {videos.map((mv, i) => (
+            <div key={mv.sys.id} className={`video${i}`}>
               <iframe
                 className="YTvideo"
                 width="560"

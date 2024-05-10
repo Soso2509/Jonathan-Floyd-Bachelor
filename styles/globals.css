@@ -572,6 +572,8 @@ a:-webkit-any-link {
   /* Media page */
   .mediaContainer {
     margin-top: 1rem;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .photoGalleri{
@@ -587,6 +589,14 @@ a:-webkit-any-link {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-gap: 15px;
+  }
+  .video0{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+  }
+  .video0 .YTvideo{
+    height: 30rem;
   }
 
   /* Insta */

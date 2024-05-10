@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from './images/Ikon_Thick_W_liten100.png'
-import NewWindowIcon from './images/icons8-open-in-new-window-16.png'
+import NewWindowIcon from './SoMeIcons/icons8-open-in-new-window-16.png'
 
 
 const HamburgerMenu = () => {

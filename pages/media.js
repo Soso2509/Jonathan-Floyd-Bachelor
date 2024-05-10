@@ -1,3 +1,4 @@
+
 import { createClient } from "contentful";
 import Image from "next/image";
 
@@ -22,10 +23,11 @@ export async function getStaticProps() {
   };
 }
 
+
 export default function Media({ videos, pictures }) {
   return (
     <>
-      <div className="bioContainer">
+      <div className="mediaContainer">
         <h1>Video</h1>
         {videos.map((mv) => (
           <div key={mv.sys.id}>

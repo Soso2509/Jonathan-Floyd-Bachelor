@@ -578,6 +578,10 @@ a:-webkit-any-link {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto ;
   }
+
+  .YTvideo{
+    height: 20rem;
+  }
   .videoGalleri {
     display: grid;
     grid-template-columns: auto auto;

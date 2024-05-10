@@ -17,7 +17,7 @@ export default function Layout({ children }) {
           <header>
             <Header />
           </header>
-          <Navbar />
+          <Navbar pathname={pathname} />
           <HamburgerMenu />
         </>
       ) : (

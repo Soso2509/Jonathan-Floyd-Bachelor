@@ -468,6 +468,7 @@ a:-webkit-any-link {
   grid-gap: 15px;
   height: 100%;
   width: 100%;
+  justify-content: center;
 }
 
 .GalleryItem{
@@ -580,23 +581,29 @@ a:-webkit-any-link {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto ;
   }
-
+  
+  .videoGalleri {
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr );
+    grid-gap: 15px;
+    
+  }
   .YTvideo{
     height: 20rem;
   }
-  .videoGalleri {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-gap: 15px;
+  .video{
+    grid-column: span 2;
   }
   .video0{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: span 4;
     
   }
   .video0 .YTvideo{
     height: 30rem;
+  }
+
+  .video:nth-last-child(1):nth-child(even) {
+    grid-column: 2 / span 2;
   }
 
   /* Insta */

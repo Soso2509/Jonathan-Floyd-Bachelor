@@ -44,19 +44,22 @@ export default function Media({ videos, pictures }) {
           </div>
         ))}
 
-        <h1>Bilder</h1>
-        {pictures.map((pic) => (
-          <div key={pic.fields.slug}>
-            <Image
-              className="boxMedia"
-              src={"https:" + pic.fields.picture.fields.file.url}
-              alt={pic.fields.altText}
-              width={pic.fields.picture.fields.file.details.image.width}
-              height={pic.fields.picture.fields.file.details.image.height}
-            />
-            <p>Picture taken by {pic.fields.photographer}</p>
-          </div>
-        ))}
+        <div className="indexElement">
+          <h1>Bilder</h1>
+          {pictures.map((pic) => (
+            <div key={pic.fields.slug}>
+              <Image
+                className="boxMedia"
+                src={"https:" + pic.fields.picture.fields.file.url}
+                alt={pic.fields.altText}
+                width={pic.fields.picture.fields.file.details.image.width}
+                height={pic.fields.picture.fields.file.details.image.height}
+              />
+              <p>Picture taken by {pic.fields.photographer}</p>
+            </div>
+          ))}
+        </div>
+        
       </div>
     </>
   );

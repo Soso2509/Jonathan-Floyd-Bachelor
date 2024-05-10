@@ -152,6 +152,8 @@ nav {
   font-size: 20pt;
   height: 5rem;
   width: 100%;
+  z-index: 2;
+
 }
 nav > .logo {
   float: left;
@@ -403,8 +405,6 @@ a:-webkit-any-link {
   padding-bottom: 1rem;
 }
 
-.merchMedia {
-}
 
 .button{
   background-color: var(--mediumTurqCl);
@@ -461,6 +461,48 @@ a:-webkit-any-link {
   margin-top: 5rem;
 }
 
+.photoGalleri{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.GalleryItem{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.ImgText {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 25%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bgClSeethru);
+}
+.GalleryItem:hover .ImgText{
+  transition: 0.5s;
+  display: none;
+}
+
+.videoConteiner {
+  width: 100%;
+  overflow: hidden;
+}
+.YTvideo {
+  width: 100%;
+  height: 14rem;
+}
+
 /* Privacy policy & accsessability statement */
 .policyContainer {
   margin-top: 6rem;
@@ -493,7 +535,7 @@ a:-webkit-any-link {
     height: 200px;
   }
 
-  /* Bio  */
+  /* Bio  Page */
   .bioPageConteiner{
     margin-top: 4rem;
   }
@@ -520,6 +562,22 @@ a:-webkit-any-link {
   }
   .bioImg{
     object-fit: cover;
+  }
+
+  /* Media page */
+  .mediaContainer {
+    margin-top: 1rem;
+  }
+
+  .photoGalleri{
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto ;
+  }
+  .videoGalleri {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 15px;
   }
 
   /* Insta */

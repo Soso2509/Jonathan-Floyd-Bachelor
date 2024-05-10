@@ -19,12 +19,8 @@ export default function Merch({ item }) {
       </div>
       <div className="boxContent">
         <h4>{itemName}</h4>
-        <a className="button" href={itemLink}>
-          Buy Here
-        </a>
-
       </div>
-        <a className="button" href={itemLink}>Buy here<Image
+        <a className="button" href={itemLink}>Buy Here<Image
             src={NewWindowIcon}
             alt="Opens link in new window"
           /></a>

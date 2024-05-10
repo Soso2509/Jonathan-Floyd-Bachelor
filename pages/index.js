@@ -10,7 +10,10 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
 
-  const konsert = await client.getEntries({ content_type: "concert" });
+  const konsert = await client.getEntries({
+    content_type: "concert",
+    order: "fields.eventDate",
+  }); //For decending order:'-fields.eventDate'
   const merch = await client.getEntries({ content_type: "merchItem" });
 
   return {
@@ -23,6 +26,7 @@ export async function getStaticProps() {
 }
 
 export default function Index({ conserts, merchitems }) {
+  console.log(conserts)
   return (
     <>
     <div className="">

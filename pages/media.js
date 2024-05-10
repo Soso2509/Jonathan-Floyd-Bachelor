@@ -34,7 +34,7 @@ export default function Media({ videos, pictures }) {
             {videos.map((mv) => (
             <div key={mv.sys.id}>
               <iframe
-              className="YTvideo"
+                className="YTvideo"
                 width="560"
                 height="315"
                 src={mv.fields.videoLink}

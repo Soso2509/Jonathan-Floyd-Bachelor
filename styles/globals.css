@@ -478,14 +478,18 @@ a:-webkit-any-link {
   text-align: center;
   align-items: center;
   justify-content: center;
+  border-radius: var(--BoxBRadius);
 }
+
 .ImgText {
   position: absolute;
   margin: 0 auto;
-  width: 100%;
+  width: 110%;
   height: fit-content;
-  top: 90%;
+  top: 95%;
   left: 50%;
+  object-fit: contain;
+  padding-bottom: 2rem;
   transform: translate(-50%, -50%);
   background-color: var(--bgClSeethru);
 }
@@ -501,6 +505,7 @@ a:-webkit-any-link {
 .YTvideo {
   width: 100%;
   height: 14rem;
+  border-radius: var(--BoxBRadius);
 }
 
 /* Privacy policy & accsessability statement */

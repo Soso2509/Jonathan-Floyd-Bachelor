@@ -23,25 +23,36 @@ export async function getStaticProps() {
 }
 
 export default function Media({ videos, pictures }) {
-  console.log(pictures);
-  //console.log(pictures);
-
   return (
     <>
       <div className="bioContainer">
         <h1>Video</h1>
+        {videos.map((mv) => (
+          <div key={mv.sys.id}>
+            <iframe
+              width="560"
+              height="315"
+              src={mv.fields.videoLink}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        ))}
 
         <h1>Bilder</h1>
         {pictures.map((pic) => (
-          <div key={pic.fields.slug} >
+          <div key={pic.fields.slug}>
             <Image
-              new
               className="boxMedia"
               src={"https:" + pic.fields.picture.fields.file.url}
-              alt={pic.fields.alttext}
+              alt={pic.fields.altText}
               width={pic.fields.picture.fields.file.details.image.width}
               height={pic.fields.picture.fields.file.details.image.height}
             />
+            <p>Picture taken by {pic.fields.photographer}</p>
           </div>
         ))}
       </div>

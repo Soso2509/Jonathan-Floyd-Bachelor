@@ -5,7 +5,7 @@ const Accessibility = () => {
         <div className="policyContainer">
             <span>
                 <h1>Accessibility statement</h1>
-                Last updated 04.04.24
+                <p>Last updated 04.04.24</p>
 
                 JonathanFloyd.com is committed to ensuring accessibility for all visitors to our website. We strive to make our website accessible to individuals with disabilities and continuously improve the user experience for everyone.
 

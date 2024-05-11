@@ -28,11 +28,11 @@ export default function Conserts({ consert }) {
       <div className="boxContent">
         <h4>{eventName}</h4>
         <p>
-          At <a href={eventLocationLink}>{eventPlaceName}</a>
+          At <a href={eventLocationLink} target="_blank">{eventPlaceName}</a>
         </p>
         <p>{moment(eventDate).format("LLL")}</p>
       </div>
-        <a className="button" href={ticketsLink}>Tickets
+        <a className="button" href={ticketsLink} target="_blank">Tickets
         <Image
             src={NewWindowIcon}
             alt="Opens link in new window"

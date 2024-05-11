@@ -6,6 +6,6 @@ export default function Footer() {
     <SoMeLinker />
     <p className="icon8">Icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
     <p>©JonathanFloyd</p>
-    <p><Link href="/privacy">Privacy policy</Link> & <Link href="/accessibility">Accessibility statement</Link></p>
+    <p><Link href="/privacy" target="_blank">Privacy policy</Link> & <Link href="/accessibility" target="_blank">Accessibility statement</Link></p>
   </>;
 }

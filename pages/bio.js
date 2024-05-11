@@ -28,12 +28,15 @@ export default function Bio({ bio }) {
   return (
     <div className="bioPageConteiner"> 
       <div className="bioContainer">
-        <Image
-          className=" bioImg grid-item"
+        <div className="grid-item" >
+          <Image
+          className=" bioImg"
           src={"https:" + bioPhoto.fields.file.url}
           width={bioPhoto.fields.file.details.image.width}
           height={bioPhoto.fields.file.details.image.height}
-        />          
+        />    
+        </div>
+              
         <div className="bioContent grid-item">       
           <h1>{title}</h1>
           <SoMeLinker/>

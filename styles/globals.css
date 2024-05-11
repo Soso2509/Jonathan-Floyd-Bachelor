@@ -574,7 +574,7 @@ a:-webkit-any-link {
 
   .photoGalleri{
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto auto auto ;
+    grid-template-rows: 0.9fr 0.9fr 0.9fr;
   }
 
   .GalleryItem:nth-last-child(1):nth-child(odd) {

@@ -26,14 +26,17 @@ export default function Bio({ bio }) {
 
   const { bioPhoto, title, slug, bioText } = bio[0].fields;
   return (
-    <div className="bioPageConteiner"> 
+    <div className="bioPageConteiner page-content"> 
       <div className="bioContainer">
-        <Image
-          className=" bioImg grid-item"
+        <div className="grid-item" >
+          <Image
+          className=" bioImg"
           src={"https:" + bioPhoto.fields.file.url}
           width={bioPhoto.fields.file.details.image.width}
           height={bioPhoto.fields.file.details.image.height}
-        />          
+        />    
+        </div>
+              
         <div className="bioContent grid-item">       
           <h1>{title}</h1>
           <SoMeLinker/>

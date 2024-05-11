@@ -1,6 +1,8 @@
 import Image from "next/image";
 import moment from "moment";
 import "moment/locale/en-gb";
+import NewWindowIcon from './SoMeIcons/icons8-open-in-new-window-16.png'
+
 
 export default function Conserts({ consert }) {
   const {
@@ -26,11 +28,16 @@ export default function Conserts({ consert }) {
       <div className="boxContent">
         <h4>{eventName}</h4>
         <p>
-          At <a href={eventLocationLink}>{eventPlaceName}</a>
+          At <a href={eventLocationLink} target="_blank">{eventPlaceName}</a>
         </p>
         <p>{moment(eventDate).format("LLL")}</p>
-        <a className="button" href={ticketsLink}>Tickets</a>
       </div>
+        <a className="button" href={ticketsLink} target="_blank">Tickets
+        <Image
+            src={NewWindowIcon}
+            alt="Opens link in new window"
+          />
+        </a>
     </div>
   );
 }

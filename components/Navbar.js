@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from './images/Ikon_Thick_W_liten100.png'
+import Logo from './images/Ikon_Thick_T_turquice_Liten.png'
 import NewWindowIcon from './SoMeIcons/icons8-open-in-new-window-16.png'
 
 
@@ -14,16 +14,17 @@ export default function Navbar() {
         <Link href="/">
         {pathname == "/" ? (
           <Image
-            src={Logo}
-            className="LogoIcon active"
-            alt="Jonathan floyd's F icon"
-          />) 
-          : (
-            <Image
               src={Logo}
               className="LogoIcon"
               alt="Jonathan floyd's F icon"
-            />)}
+            />
+            ) 
+          : (
+            <Image
+            src={Logo}
+            className="LogoIcon activeLogo"
+            alt="Jonathan floyd's F icon"
+          />)}
         </Link>
       </div>
       <div className="navPages">

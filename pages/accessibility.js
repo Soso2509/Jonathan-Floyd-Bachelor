@@ -2,7 +2,7 @@
 const Accessibility = () => {
 
     return(
-        <div className="policyContainer">
+        <div className="policyContainer page-content">
             <span>
                 <h1>Accessibility statement</h1>
                 <p>Last updated 04.04.24</p>
@@ -15,14 +15,12 @@ const Accessibility = () => {
                 <h2>Accessible Features</h2>
                 Our website incorporates various features to enhance accessibility, including:
 
-                <ul>
-                    <li>Alternative text for images and non-text content</li>
-                    <li>Clear and consistent navigation</li>
-                    <li>Keyboard navigation support</li>
-                    <li>Scalable text and resizable layout</li>
-                    <li>Descriptive links and headings for easier navigation</li>
-                    <li>Compatibility with screen readers and other assistive technologies</li>
-                </ul>
+                    <p>Alternative text for images and non-text content</p>
+                    <p>Clear and consistent navigation</p>
+                    <p>Keyboard navigation support</p>
+                    <p>Scalable text and resizable layout</p>
+                    <p>Descriptive links and headings for easier navigation</p>
+                    <p>Compatibility with screen readers and other assistive technologies</p>
 
                 {/* <h2>Feedback</h2>
                 We welcome feedback on the accessibility of our website. If you encounter any accessibility barriers or have suggestions for improvement, please contact us at [Your Contact Information]. We will make every effort to address your concerns and enhance the accessibility of our website. */}

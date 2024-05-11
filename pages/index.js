@@ -40,7 +40,7 @@ export default function Index({ conserts, merchitems, headers }) {
       </header>
       <Navbar />
       <HamburgerMenu />
-
+    <div className="page-content">
       <div className="">
         <h1>Live dates</h1>
         {conserts.length == 0 ? (
@@ -80,6 +80,8 @@ export default function Index({ conserts, merchitems, headers }) {
           <Instagram />
         </div>
       </div>
+    </div>
+      
     </>
   );
 }

@@ -47,6 +47,7 @@ body {
   color: var(--textCl);
   align-items: center;
   min-width: 100%;
+  width: 100%;
 }
 .layout {
   min-height: 100vh;
@@ -508,6 +509,10 @@ a:-webkit-any-link {
 .policyContainer {
   margin-top: 6rem;
 }
+.policyContainer ul {
+  list-style: none;
+  justify-content: center;
+}
 
 @media only screen and (min-width: 700px){
   body {
@@ -624,10 +629,6 @@ a:-webkit-any-link {
   /* Privacy policy & accsessability statement */
   .policyContainer {
     margin: 0;
-    margin: 0 10%;
-  }
-  .policyContainer ul {
-    list-style: none;
   }
 }
 

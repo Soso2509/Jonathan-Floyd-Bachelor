@@ -1,5 +1,4 @@
 import { usePathname } from "next/navigation";
-import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import HamburgerMenu from "./HamburgerMenu";
@@ -9,16 +8,12 @@ import Image from "next/image";
 
 export default function Layout({ children }) {
   const pathname = usePathname();
-  
+
   return (
     <div className="layout">
       {pathname == "/" ? (
         <>
-          <header>
-            <Header />
-          </header>
-          <Navbar />
-          <HamburgerMenu />
+
         </>
       ) : (
         <>
@@ -26,7 +21,7 @@ export default function Layout({ children }) {
           <HamburgerMenu />
         </>
       )}
-      <div className="page-content">{children}</div>
+      <div>{children}</div>
 
       <footer>
         <Footer />

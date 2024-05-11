@@ -26,7 +26,7 @@ export default function Bio({ bio }) {
 
   const { bioPhoto, title, slug, bioText } = bio[0].fields;
   return (
-    <div className="bioPageConteiner"> 
+    <div className="bioPageConteiner page-content"> 
       <div className="bioContainer">
         <div className="grid-item" >
           <Image

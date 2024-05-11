@@ -27,7 +27,7 @@ export async function getStaticProps() {
 export default function Media({ videos, pictures }) {
   return (
     <>
-      <div className="mediaContainer">
+      <div className="mediaContainer page-content">
         <div className="videoConteiner">
           <h1>Video</h1>
           <div className=" videoGalleri">

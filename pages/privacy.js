@@ -1,7 +1,7 @@
 
 export default function Privacy(){
     return(
-    <div className="policyContainer">
+    <div className="policyContainer page-content">
         <h1>Privacy policy</h1>
         <span>
         JonathanFloyd.com is committed to maintaining the privacy of visitors to our website. This Privacy Notice outlines the types of information we may collect and how we use it.

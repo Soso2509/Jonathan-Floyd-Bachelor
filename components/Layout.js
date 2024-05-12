@@ -11,7 +11,7 @@ export default function Layout({ children }) {
     <div className="layout">
       {pathname == "/" ? (
         <>
-
+          
         </>
       ) : (
         <>

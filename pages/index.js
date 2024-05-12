@@ -35,13 +35,12 @@ export async function getStaticProps() {
 export default function Index({ conserts, merchitems, headers }) {
   return (
     <>
-      <div className="IndexNavCont">
         <header>
           <Header header={headers} />
         </header>
         <Navbar />
         <HamburgerMenu />
-      </div>
+      
         
       <div className="page-content">
         <div className="">

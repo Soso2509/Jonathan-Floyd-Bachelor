@@ -35,52 +35,55 @@ export async function getStaticProps() {
 export default function Index({ conserts, merchitems, headers }) {
   return (
     <>
-      <header>
-        <Header header={headers} />
-      </header>
-      <Navbar />
-      <HamburgerMenu />
-    <div className="page-content">
-      <div className="">
-        <h1>Live dates</h1>
-        {conserts.length == 0 ? (
-          <h2>More to come</h2>
-        ) : (
-          <div className="Window">
-            {conserts.map((consert) => (
-              <Conserts key={consert.sys.id} consert={consert} />
-            ))}
-          </div>
-        )}
+      <div className="IndexNavCont">
+        <header>
+          <Header header={headers} />
+        </header>
+        <Navbar />
+        <HamburgerMenu />
       </div>
+        
+      <div className="page-content">
+        <div className="">
+          <h1>Live dates</h1>
+          {conserts.length == 0 ? (
+            <h2>More to come</h2>
+          ) : (
+            <div className="Window">
+              {conserts.map((consert) => (
+                <Conserts key={consert.sys.id} consert={consert} />
+              ))}
+            </div>
+          )}
+        </div>
 
-      <div className="indexElement">
-        <h1>Merch</h1>
-        {merchitems.length == 0 ? (
-          <h2>More to come</h2>
-        ) : (
-          <div className="Window">
-            {merchitems.map((item) => (
-              <Merch key={item.sys.id} item={item} />
-            ))}
+        <div className="indexElement">
+          <h1>Merch</h1>
+          {merchitems.length == 0 ? (
+            <h2>More to come</h2>
+          ) : (
+            <div className="Window">
+              {merchitems.map((item) => (
+                <Merch key={item.sys.id} item={item} />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="indexElement">
+          <h1>Music</h1>
+          <div className="SpotifyContainer">
+            <Spotify />
           </div>
-        )}
-      </div>
+        </div>
 
-      <div className="indexElement">
-        <h1>Music</h1>
-        <div className="SpotifyContainer">
-          <Spotify />
+        <div className="indexElement">
+          <h1>Instagram</h1>
+          <div className="InstaContiner">
+            <Instagram />
+          </div>
         </div>
       </div>
-
-      <div className="indexElement">
-        <h1>Instagram</h1>
-        <div className="InstaContiner">
-          <Instagram />
-        </div>
-      </div>
-    </div>
       
     </>
   );

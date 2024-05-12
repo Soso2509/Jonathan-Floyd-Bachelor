@@ -19,7 +19,7 @@ export default function Layout({ children }) {
           <HamburgerMenu />
         </>
       )}
-      <div>{children}</div>
+      <div className="contentDiv">{children}</div>
 
       <footer>
         <Footer />

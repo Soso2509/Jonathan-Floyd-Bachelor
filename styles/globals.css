@@ -377,10 +377,12 @@ a:-webkit-any-link {
 
 .Window {
   width: 100%;
-  justify-items: center;
-  
-  grid-template-rows: 500px;
-  grid-auto-rows: 400px;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  margin: 0 auto;
 }
 
 .boxMedia {
@@ -424,7 +426,7 @@ a:-webkit-any-link {
   max-width: 300px;
   max-height: 500px;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin: 1rem 0.5rem;
   background-color: var(--boxColour);
   border-radius: var(--BoxBRadius);
   border: var(--boxColour) solid 10px;
@@ -491,7 +493,6 @@ a:-webkit-any-link {
 .photoGalleri{
   display: grid;
   grid-template-columns: repeat( 4, 1fr );
-  grid-template-rows: auto;
   grid-gap: 15px;
   height: 100%;
   width: 100%;
@@ -565,6 +566,7 @@ a:-webkit-any-link {
 
   .boxContainer {
     width: 250px;
+    margin: 1rem 2rem;
   }
   .featured {
     max-height: 200px;

@@ -6,7 +6,7 @@ export default function Merch({ item }) {
   const { itemName, itemLink, merchPicture } = item.fields;
 
   return (
-    <div className="GalleryItem boxContainer">
+    <div className="boxContainer">
       <div className="featured ">
 
         <Image

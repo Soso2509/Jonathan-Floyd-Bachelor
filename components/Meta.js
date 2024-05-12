@@ -20,7 +20,7 @@ const Meta = () => {
             <meta name="twitter:image" content="https://jonathan-floyd-bachelor.vercel.app/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F27mfh2lrnlh7%2FvR5UNiYxCd3At8OZEXaJr%2F894336cda494d8b8f47beeabf561063d%2F399051107_811398990993307_6476920289215292411_n.jpg&w=1920&q=75"/>
             <meta name="twitter:image:alt" content="Image of Jonathan floyd"/>
 
-            <meta name="keywords" content="artist, Jonathan Foyd"></meta>
+            <meta name="keywords" content="Jonathan Floyd, musician, Når Jeg Faller Ned, Demon Time, Danser på Kanten, Intensjoner, Toothfairy"></meta>
             <title>Jonathan Floyd</title>
         </Head>
     )

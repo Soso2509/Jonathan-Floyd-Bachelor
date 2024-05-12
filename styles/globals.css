@@ -163,6 +163,10 @@ nav {
   z-index: 2;
 
 }
+.IndexNavCont {
+  width: 100%;
+  min-width: 100%;
+}
 nav > .logo {
   float: left;
   overflow: hidden;

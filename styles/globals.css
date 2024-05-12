@@ -570,6 +570,13 @@ a:-webkit-any-link {
     height: 200px;
   }
 
+  .SoMeIcon {
+    margin: 0 1rem;
+  }
+  header .SoMeIcon {
+    margin: 0 1.5rem;
+  }
+
   /* Bio  Page */
   .bioPageConteiner{
     margin-top: 4rem;
@@ -592,9 +599,6 @@ a:-webkit-any-link {
     margin: 1rem 0;
   }
 
-  .bioContent {
-
-  }
   .bioImg{
     object-fit: cover;
   }

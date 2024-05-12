@@ -377,10 +377,12 @@ a:-webkit-any-link {
 
 .Window {
   width: 100%;
+  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content:center;
+  margin: 0 auto;
 }
 
 .boxMedia {
@@ -564,6 +566,7 @@ a:-webkit-any-link {
 
   .boxContainer {
     width: 250px;
+    margin: 1rem 2rem;
   }
   .featured {
     max-height: 200px;

@@ -105,6 +105,17 @@ header h2 {
   font-size: 1.2em;
   font-weight: 400;
 }
+/* header .someLinker {
+  background-color: var(--bgClSeethru);
+  width: fit-content;
+  margin: 0;
+  padding: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  border-radius: var(--BoxBRadius);
+} */
+
 h1 {
   font-family: "New Rocker", system-ui;
   font-weight: 400;
@@ -139,9 +150,6 @@ footer a:hover {
 footer p {
   font-size: 12pt;
 }
-.someLinker {
-  margin: 1rem 1rem;
-}
 
 a:link {
   text-decoration: none;
@@ -169,10 +177,7 @@ nav {
   z-index: 2;
 
 }
-.IndexNavCont {
-  width: screen;
-  min-width: 100%;
-}
+
 nav > .logo {
   float: left;
   overflow: hidden;

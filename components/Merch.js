@@ -7,7 +7,7 @@ export default function Merch({ item }) {
 
   return (
     <div className="boxContainer">
-      <div className="featured">
+      <div className="featured ">
 
         <Image
           className="boxMedia"

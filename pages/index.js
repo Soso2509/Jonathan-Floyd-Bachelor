@@ -48,7 +48,7 @@ export default function Index({ conserts, merchitems, headers }) {
           {conserts.length == 0 ? (
             <h2>More to come</h2>
           ) : (
-            <div className="Window">
+            <div className="photoGalleri Window">
               {conserts.map((consert) => (
                 <Conserts key={consert.sys.id} consert={consert} />
               ))}
@@ -61,7 +61,7 @@ export default function Index({ conserts, merchitems, headers }) {
           {merchitems.length == 0 ? (
             <h2>More to come</h2>
           ) : (
-            <div className="Window">
+            <div className="photoGalleri Window">
               {merchitems.map((item) => (
                 <Merch key={item.sys.id} item={item} />
               ))}

@@ -16,7 +16,7 @@ export default function Conserts({ consert }) {
 
   moment.locale("en-gb");
   return (
-    <div className="boxContainer">
+    <div className="GalleryItem boxContainer">
       <div className="featured">
         <Image
           className="boxMedia"

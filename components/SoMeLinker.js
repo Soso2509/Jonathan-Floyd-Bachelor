@@ -1,10 +1,10 @@
 import Image from "next/image";
-import tiktok from "./SoMeIcons/icons8-tiktok-32.png"
-import instagram from "./SoMeIcons/icons8-instagram-32.png"
-import facebook from "./SoMeIcons/icons8-facebook-32.png"
-import spotify from "./SoMeIcons/icons8-spotify-32.png"
-import youtube from "./SoMeIcons/icons8-youtube-32.png"
-import itunes from "./SoMeIcons/icons8-itunes-32.png"
+import tiktok from "./SoMeIcons/icons8-tiktok-96.png"
+import instagram from "./SoMeIcons/icons8-instagram-96.png"
+import facebook from "./SoMeIcons/icons8-facebook-96.png"
+import spotify from "./SoMeIcons/icons8-spotify-96.png"
+import youtube from "./SoMeIcons/icons8-youtube-96.png"
+import itunes from "./SoMeIcons/icons8-itunes-96.png"
 
 export default function SoMeLinker() {
   return (

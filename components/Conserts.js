@@ -11,6 +11,7 @@ export default function Conserts({ consert }) {
     eventLocationLink,
     eventPlaceName,
     eventHeader,
+    pictureAltText,
     ticketsLink,
   } = consert.fields;
 
@@ -21,6 +22,7 @@ export default function Conserts({ consert }) {
         <Image
           className="boxMedia"
           src={"https:" + eventHeader.fields.file.url}
+          alt={pictureAltText}
           width={eventHeader.fields.file.details.image.width}
           height={eventHeader.fields.file.details.image.height}
         />

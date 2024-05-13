@@ -231,6 +231,8 @@ nav a {
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  z-index: 2;
+
 }
 .burger {
   height: 3rem;

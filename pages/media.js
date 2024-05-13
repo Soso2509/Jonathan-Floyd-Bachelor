@@ -52,7 +52,7 @@ export default function Media({ videos, pictures }) {
         
 
         <div className="indexElement">
-          <h1>Bilder</h1>
+          <h1>Pictures</h1>
           <div className="photoGalleri">
             {pictures.map((pic) => (
               <div className="GalleryItem" key={pic.fields.slug}>

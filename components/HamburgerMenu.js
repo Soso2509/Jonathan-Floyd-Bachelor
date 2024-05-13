@@ -46,15 +46,16 @@ const HamburgerMenu = () => {
                 <div className="hamburgerLinks">
                     <Link  href="/">Home</Link>
 
-                    <Link href="/bio">Bio</Link>
+                    <Link href="/bio" onClick={updateMenu}>Bio</Link>
                 
-                    <Link href="/media">Media</Link>
+                    <Link href="/media" onClick={updateMenu}>Media</Link>
 
                     <div>
                       <a
-                    href={"https://unitedstage.no/artister/jonathan-floyd/"}
-                    target="_blank"
+                        href={"https://unitedstage.no/artister/jonathan-floyd/"}
+                        target="_blank"
                         className="NewWindowIcon"
+                        onClick={updateMenu}
                     >
                     Booking
                     <Image

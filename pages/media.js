@@ -1,6 +1,7 @@
 
 import { createClient } from "contentful";
 import Image from "next/image";
+import Meta from "../components/Meta";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -13,20 +14,23 @@ export async function getStaticProps() {
     content_type: "videos",
     order: "-fields.datePublished",
   }); //For decending order:'-fields.eventDate'
+  const head = await client.getEntries({ content_type: "header" });
 
   return {
     props: {
       pictures: pic.items,
       videos: vid.items,
+      headers: head.items,
     },
     revalidate: 1,
   };
 }
 
 
-export default function Media({ videos, pictures }) {
+export default function Media({ videos, pictures, headers }) {
   return (
     <>
+    <Meta header={headers} page=" - Media"/>
       <div className="mediaContainer page-content">
         <div className="videoConteiner">
           <h1>Video</h1>

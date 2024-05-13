@@ -485,6 +485,12 @@ a:-webkit-any-link {
   height: 100%;
   border-radius: var(--BoxBRadius);
 }
+.bioContainer .someLinker{
+  height: fit-content;
+}
+.bioContainer .SoMeIcon {
+  margin: 0 0.3rem;
+}
 
 
 /* Media Page */

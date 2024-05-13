@@ -4,6 +4,7 @@ import SoMeLinker from "../components/SoMeLinker";
 
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Meta from "../components/Meta";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -12,21 +13,24 @@ export async function getStaticProps() {
   });
 
   const res = await client.getEntries({ content_type: "biografi" });
+  const head = await client.getEntries({ content_type: "header" });
 
   return {
     props: {
       bio: res.items,
+      headers: head.items,
     },
     revalidate: 1,
   };
 }
 
-export default function Bio({ bio }) {
+export default function Bio({ bio, headers }) {
   console.log(bio[0]);
 
   const { bioPhoto, title, slug, bioText } = bio[0].fields;
   return (
     <div className="bioPageConteiner page-content"> 
+      <Meta header={headers} page=" - Bio"/> 
       <div className="bioContainer">
         <div className="grid-item" >
           <Image

@@ -8,6 +8,7 @@ import Conserts from "../components/Conserts";
 import Merch from "../components/Merch";
 import Spotify from "../components/Spotify";
 import Instagram from "../components/Instagram";
+import Meta from "../components/Meta";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -35,6 +36,7 @@ export async function getStaticProps() {
 export default function Index({ conserts, merchitems, headers }) {
   return (
     <>
+      <Meta header={headers} page=""/>
         <header>
           <Header header={headers} />
         </header>

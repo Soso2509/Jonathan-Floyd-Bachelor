@@ -51,9 +51,9 @@ export default function Media({ videos, pictures, headers }) {
             </div>
           ))}
           </div>
-          
+
         </div>
-        
+
 
         <div className="indexElement">
           <h1>Pictures</h1>
@@ -67,13 +67,13 @@ export default function Media({ videos, pictures, headers }) {
                   width={pic.fields.picture.fields.file.details.image.width}
                   height={pic.fields.picture.fields.file.details.image.height}
                 />
-                <div className="ImgText"><p>Picture taken by {pic.fields.photographer}</p></div>
+                <div className="ImgText"><p>Picture by {pic.fields.photographer}</p></div>
               </div>
             ))}
           </div>
-          
+
         </div>
-        
+
       </div>
     </>
   );

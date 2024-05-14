@@ -3,7 +3,7 @@ import SoMeLinker from "./SoMeLinker";
 import HeaderLogo from "./images/Logo-stor.png";
 
 export default function Header({ header }) {
-  const { headerImage, headerAltText } = header[0].fields;
+  const { headerImage, headerAltText, slug } = header[0].fields;
 
   return (
     <>
@@ -19,6 +19,7 @@ export default function Header({ header }) {
       </div>
 
       <Image
+        key={slug}
         src={"https:" + headerImage.fields.file.url}
         className="HeaderImg"
         alt={headerAltText}

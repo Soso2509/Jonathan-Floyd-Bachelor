@@ -26,9 +26,10 @@ export async function getStaticProps() {
 export default function Bio({ bio, headers }) {
   console.log(bio[0]);
 
-  const { bioPhoto, pictureAltText, title, bioText } = bio[0].fields;
+  const { bioPhoto, pictureAltText, title, bioText, slug } = bio[0].fields;
+
   return (
-    <div className="bioPageConteiner page-content">
+    <div className="bioPageConteiner page-content" key={slug}>
       <Meta header={headers} page=" - Bio" />
       <div className="bioContainer">
         <div className="grid-item">

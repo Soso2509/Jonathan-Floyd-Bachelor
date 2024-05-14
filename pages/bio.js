@@ -2,7 +2,6 @@ import { createClient } from "contentful";
 import Image from "next/image";
 import SoMeLinker from "../components/SoMeLinker";
 
-
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Meta from "../components/Meta";
 
@@ -27,23 +26,24 @@ export async function getStaticProps() {
 export default function Bio({ bio, headers }) {
   console.log(bio[0]);
 
-  const { bioPhoto, title, slug, bioText } = bio[0].fields;
+  const { bioPhoto, pictureAltText, title, bioText } = bio[0].fields;
   return (
-    <div className="bioPageConteiner page-content"> 
-      <Meta header={headers} page=" - Bio"/> 
+    <div className="bioPageConteiner page-content">
+      <Meta header={headers} page=" - Bio" />
       <div className="bioContainer">
-        <div className="grid-item" >
+        <div className="grid-item">
           <Image
-          className=" bioImg"
-          src={"https:" + bioPhoto.fields.file.url}
-          width={bioPhoto.fields.file.details.image.width}
-          height={bioPhoto.fields.file.details.image.height}
-        />    
+            className=" bioImg"
+            src={"https:" + bioPhoto.fields.file.url}
+            alt={pictureAltText}
+            width={bioPhoto.fields.file.details.image.width}
+            height={bioPhoto.fields.file.details.image.height}
+          />
         </div>
-              
-        <div className="bioContent grid-item">       
+
+        <div className="bioContent grid-item">
           <h1>{title}</h1>
-          <SoMeLinker/>
+          <SoMeLinker />
           <div>{documentToReactComponents(bioText)}</div>
         </div>
       </div>

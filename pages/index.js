@@ -8,6 +8,7 @@ import Conserts from "../components/Conserts";
 import Merch from "../components/Merch";
 import Spotify from "../components/Spotify";
 import Instagram from "../components/Instagram";
+import Meta from "../components/Meta";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -35,13 +36,13 @@ export async function getStaticProps() {
 export default function Index({ conserts, merchitems, headers }) {
   return (
     <>
-        <header>
-          <Header header={headers} />
-        </header>
-        <Navbar />
-        <HamburgerMenu />
-      
-        
+      <Meta header={headers} page="" />
+      <header>
+        <Header header={headers} />
+      </header>
+      <Navbar />
+      <HamburgerMenu />
+
       <div className="page-content">
         <div className="">
           <h1>Live dates</h1>
@@ -50,7 +51,7 @@ export default function Index({ conserts, merchitems, headers }) {
           ) : (
             <div className="Window">
               {conserts.map((consert) => (
-                <Conserts key={consert.sys.id} consert={consert} />
+                <Conserts key={consert.fields.slug} consert={consert} />
               ))}
             </div>
           )}
@@ -63,7 +64,7 @@ export default function Index({ conserts, merchitems, headers }) {
           ) : (
             <div className="Window">
               {merchitems.map((item) => (
-                <Merch key={item.sys.id} item={item} />
+                <Merch key={item.fields.slug} item={item} />
               ))}
             </div>
           )}
@@ -83,7 +84,6 @@ export default function Index({ conserts, merchitems, headers }) {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

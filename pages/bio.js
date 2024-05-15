@@ -24,7 +24,7 @@ export async function getStaticProps() {
 }
 
 export default function Bio({ bio, headers }) {
-  console.log(bio[0]);
+  // console.log(bio[0]);
 
   const { bioPhoto, pictureAltText, title, bioText, slug } = bio[0].fields;
 

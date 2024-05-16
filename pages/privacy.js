@@ -1,9 +1,15 @@
+import Head from "next/head";
 
 export default function Privacy(){
     return(
     <div className="policyContainer page-content">
-      
+        <Head>
+            <title>Jonathan Floyd - Privacy policy</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta name="description" content="Privacy policy for the Jonathan Floyd website" />
+        </Head>
         <h1>Privacy policy</h1>
+        <p>Last updated 04.04.24</p>
         <span>
         JonathanFloyd.com is committed to maintaining the privacy of visitors to our website. This Privacy Notice outlines the types of information we may collect and how we use it.
        

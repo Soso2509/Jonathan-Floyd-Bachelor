@@ -3,6 +3,10 @@ const Accessibility = () => {
 
     return(
         <div className="policyContainer page-content">
+            <Head>
+                <title>Jonathan Floyd - Accessibility statement</title>
+                <meta name="description" content="Accessibility statement for the Jonathan Floyd Website."></meta>
+            </Head>
             <span>
                 <h1>Accessibility statement</h1>
                 <p>Last updated 04.04.24</p>

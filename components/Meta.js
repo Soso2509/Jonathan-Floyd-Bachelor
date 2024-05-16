@@ -4,6 +4,9 @@ const Meta = ({ header, page }) => {
     const { headerImage, headerAltText } = header[0].fields;
     return (
         <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <meta name="robots" content="index, follow"/>
+            
             <meta property="og:title" content={"Jonathan Floyd" + page}/>
             <meta property="og:description" content="Jonathan Floyd is a multitalented artist and producer from Oslo, Norway."/>
             <meta property="og:url" content="https://jonathan-floyd-bachelor.vercel.app/"/>

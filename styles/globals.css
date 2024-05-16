@@ -545,7 +545,7 @@ a:-webkit-any-link {
 }
 
 /* Privacy policy & accsessability statement */
-.policyContainer {
+.policyContainer {  
   margin-top: 6rem;
 }
 .policyContainer ul {
@@ -673,7 +673,7 @@ a:-webkit-any-link {
 
   /* Privacy policy & accsessability statement */
   .policyContainer {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 

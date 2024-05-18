@@ -121,7 +121,7 @@ h1 {
   font-style: normal;
 } */
 footer {
-  color: #bbb;
+  color: var(--textCl);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -545,7 +545,7 @@ a:-webkit-any-link {
 }
 
 /* Privacy policy & accsessability statement */
-.policyContainer {
+.policyContainer {  
   margin-top: 6rem;
 }
 .policyContainer ul {
@@ -673,7 +673,7 @@ a:-webkit-any-link {
 
   /* Privacy policy & accsessability statement */
   .policyContainer {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 

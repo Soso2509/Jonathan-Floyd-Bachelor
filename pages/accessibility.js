@@ -1,8 +1,14 @@
+import Head from "next/head"
 
 const Accessibility = () => {
 
     return(
         <div className="policyContainer page-content">
+           <Head>
+                <title>Jonathan Floyd - Accessibility statement</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <meta name="description" content="Accessibility statement for the Jonathan Floyd website" />
+            </Head>
             <span>
                 <h1>Accessibility statement</h1>
                 <p>Last updated 04.04.24</p>

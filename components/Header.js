@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SoMeLinker from "./SoMeLinker";
-import HeaderLogo from "./images/Logo-stor.png";
+import HeaderLogo from "../public/images/Logo-stor.png";
 
 export default function Header({ header }) {
   const { headerImage, headerAltText, slug } = header[0].fields;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import moment from "moment";
 import "moment/locale/en-gb";
-import NewWindowIcon from './SoMeIcons/icons8-open-in-new-window-16.png'
+import NewWindowIcon from '../public/SoMeIcons/icons8-open-in-new-window-16.png'
 
 
 export default function Conserts({ consert }) {

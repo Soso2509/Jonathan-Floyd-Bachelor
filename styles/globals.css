@@ -121,7 +121,7 @@ h1 {
   font-style: normal;
 } */
 footer {
-  color: #bbb;
+  color: var(--textCl);
   text-align: center;
   margin: 0;
   padding: 0;

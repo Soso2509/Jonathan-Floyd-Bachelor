@@ -13,6 +13,7 @@ export default function Header({ header }) {
             src={HeaderLogo}
             className="HeaderLogo"
             alt="Header Logo som sier Jonatan Floyd"
+            loading="eager"
           />
           <SoMeLinker />
         </div>
@@ -26,6 +27,7 @@ export default function Header({ header }) {
         layout="fill"
         objectFit="cover"
         objectPosition="center"
+        loading="eager"
       />
     </>
   );

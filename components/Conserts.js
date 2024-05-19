@@ -28,7 +28,7 @@ export default function Conserts({ consert }) {
         />
       </div>
       <div className="boxContent">
-        <h4>{eventName}</h4>
+        <h2>{eventName}</h2>
         <p>
           At <a href={eventLocationLink} target="_blank">{eventPlaceName}</a>
         </p>

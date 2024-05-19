@@ -16,12 +16,14 @@ export default function Navbar() {
               src={Logo}
               className="LogoIcon"
               alt="Jonathan floyd's F icon"
+              loading="eager"
             />
           ) : (
             <Image
               src={Logo}
               className="LogoIcon activeLogo"
               alt="Jonathan floyd's F icon"
+              loading="eager"
             />
           )}
         </Link>
@@ -48,7 +50,10 @@ export default function Navbar() {
             className="NewWindowIcon"
           >
             Booking
-            <Image src={NewWindowIcon} alt="Opens link in new window" />
+            <Image 
+            src={NewWindowIcon} 
+            alt="Opens link in new window"
+            loading="eager" />
           </a>
         </div>
       </div>

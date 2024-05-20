@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NewWindowIcon from "./SoMeIcons/icons8-open-in-new-window-16.png";
+import NewWindowIcon from "../public/SoMeIcons/icons8-open-in-new-window-16.png";
 
 export default function Merch({ item }) {
   const { itemName, itemLink, merchPicture, pictureAltText } = item.fields;
@@ -16,7 +16,7 @@ export default function Merch({ item }) {
         />
       </div>
       <div className="boxContent">
-        <h4>{itemName}</h4>
+        <h2>{itemName}</h2>
       </div>
       <a className="button" href={itemLink} target="_blank">
         Buy Here

@@ -5,7 +5,7 @@ export default function Spotify() {
                 <iframe 
                 className="spotifyContent"
                 src="https://open.spotify.com/embed/artist/11kCkdHKt7MYt0nkyj8XjP?utm_source=generator&theme=0" 
-                frameBorder="0" allowfullscreen="" 
+                allowfullscreen="" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                 loading="lazy"></iframe>
             </>

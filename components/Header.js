@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SoMeLinker from "./SoMeLinker";
-import HeaderLogo from "./images/Logo-stor.png";
+import HeaderLogo from "../public/images/Logo-stor.png";
 
 export default function Header({ header }) {
   const { headerImage, headerAltText, slug } = header[0].fields;
@@ -13,6 +13,7 @@ export default function Header({ header }) {
             src={HeaderLogo}
             className="HeaderLogo"
             alt="Header Logo som sier Jonatan Floyd"
+            loading="eager"
           />
           <SoMeLinker />
         </div>
@@ -26,6 +27,7 @@ export default function Header({ header }) {
         layout="fill"
         objectFit="cover"
         objectPosition="center"
+        loading="eager"
       />
     </>
   );

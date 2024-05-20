@@ -70,6 +70,7 @@ header {
   width: 100%;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .headerConteiner {
   height: 100vh;
@@ -115,13 +116,11 @@ h1 {
   font-weight: 400;
   font-style: normal;
 }
-/* h2 {
-  font-family: "New Rocker", system-ui;
-  font-weight: 400;
-  font-style: normal;
-} */
+h2 {
+  font-size: 14pt;
+}
 footer {
-  color: #bbb;
+  color: var(--textCl);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -348,6 +347,7 @@ a:-webkit-any-link {
   height: 35rem;
   background-color: var(--boxColour);
   border-radius: var(--BoxBRadius);
+  border: none;
 }
 
 .spotifyContent {
